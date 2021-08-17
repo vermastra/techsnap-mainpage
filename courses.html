@@ -28,6 +28,7 @@
             --body-bg-col: white;
             --desine-col: #ff1493;
             --btn-bg-col: white;
+            --card-parent-bg-col: rgb(242, 243, 246);
             --toggle-border-col: black;
 
         }
@@ -39,6 +40,7 @@
             --desine-col: #ff1493;
             --toggle-border-col: white;
             --btn-bg-col: black;
+            --card-parent-bg-col: #161719;
             transition: all .5s;
         }
 
@@ -104,12 +106,13 @@
         a:hover {
             color: var(--desine-col);
         }
-        .pos{
+
+        .pos {
             position: relative;
             top: 50px;
         }
 
-        .cover{
+        .cover {
             background-image: url("./courses2.png");
             width: 100%;
             height: 43vh;
@@ -120,6 +123,7 @@
             background-size: 100% 100%;
             background-repeat: no-repeat;
         }
+
         .block {
             padding-top: 20px;
             width: 75%;
@@ -168,7 +172,7 @@
         }
 
         .contact {
-            margin-top: 20px;
+            /* margin-top: 20px; */
             padding-bottom: 20px;
             font-size: 13pt;
             font-weight: 700;
@@ -203,6 +207,7 @@
         }
 
         .card {
+            border-radius: 7px;
             width: 100%;
             height: 95%;
             display: flex;
@@ -230,6 +235,12 @@
         .card-title {
             font-size: 1.7rem;
             color: #ff1493;
+        }
+
+        .bgcol{
+            background: var(--card-parent-bg-col);
+            margin-top: 70px;
+            padding-bottom: 70px;
         }
 
         @media only screen and (max-width:1200px) {
@@ -276,18 +287,20 @@
         @media only screen and (max-width:577px) {
 
             p,
-            h1  {
+            h1 {
                 padding-left: 8px;
                 padding-right: 8px;
             }
 
-            .cover h1{
+            .cover h1 {
                 padding-left: 20px;
                 padding-right: 20px;
             }
-            .cover{
+
+            .cover {
                 height: 30vh;
             }
+
             nav h1 {
                 padding: 0;
             }
@@ -363,88 +376,95 @@
             </p>
             <p>Dive deep into the course which you want to master and start learning today.</p>
         </div>
-        <hr>
-        <h2 style="text-align: center;">Find which interests you the most</h2>
-        <div class="cards">
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src=" https://yyb7613mjr31k8vxr4692ftk-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/d6aa5176-statistics-for-data-science-courses.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"> Data Science using python</h5>
-                        <p class="card-text">Learn Data Science today and get to know everything about that involves
-                            data. </p>
-                    </div>
-                </div>
-            </a>
+        <!-- <hr> -->
+    </div>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top" src=" https://thumbs.gfycat.com/AshamedWeightyDachshund-max-1mb.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Intro to Machine Learning</h5>
-                        <p class="card-text">Dive into Machine Learning today and take a step forward to AI.</p>
+    <div class="bgcol">
+        <div class="container pos">
+            <h2 style="text-align: center;">Find which interests you the most</h2>
+            <div class="cards">
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src=" https://yyb7613mjr31k8vxr4692ftk-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/d6aa5176-statistics-for-data-science-courses.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> Data Science using python</h5>
+                            <p class="card-text">Learn Data Science today and get to know everything about that involves
+                                data. </p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://cdn.dribbble.com/users/1523313/screenshots/13671653/data-analysis.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Data Analytics with SQL</h5>
-                        <p class="card-text">Dive into some operations which are used to analyse the data.</p>
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top" src=" https://thumbs.gfycat.com/AshamedWeightyDachshund-max-1mb.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Intro to Machine Learning</h5>
+                            <p class="card-text">Dive into Machine Learning today and take a step forward to AI.</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://www.sithcomputers.com/wp-content/uploads/2021/02/Full-Stack-Developer-1.gif "
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Full Stack Development</h5>
-                        <p class="card-text">Learn Full Stack development and know everything about front-end and
-                            back-end of Websites.</p>
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://cdn.dribbble.com/users/1523313/screenshots/13671653/data-analysis.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analytics with SQL</h5>
+                            <p class="card-text">Dive into some operations which are used to analyse the data.</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top" src="https://www.weblineindia.com/wp-content/uploads/2019/08/Business.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Intro to Artificial Intelligence</h5>
-                        <p class="card-text">Take the first step to get into AI and develop things to make them simpler
-                            since Artificial Intelligence is our future.</p>
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://www.sithcomputers.com/wp-content/uploads/2021/02/Full-Stack-Developer-1.gif "
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Full Stack Development</h5>
+                            <p class="card-text">Learn Full Stack development and know everything about front-end and
+                                back-end of Websites.</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://cdn.dribbble.com/users/2020096/screenshots/4389020/intro-2.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Deep Learning</h5>
-                        <p class="card-text">Learn basics of Deep Learning like neuralnetworks and much more to develop
-                            advanced applications.</p>
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://www.weblineindia.com/wp-content/uploads/2019/08/Business.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Intro to Artificial Intelligence</h5>
+                            <p class="card-text">Take the first step to get into AI and develop things to make them
+                                simpler
+                                since Artificial Intelligence is our future.</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://cdn.dribbble.com/users/2020096/screenshots/4389020/intro-2.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Deep Learning</h5>
+                            <p class="card-text">Learn basics of Deep Learning like neuralnetworks and much more to
+                                develop
+                                advanced applications.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
         </div>
-
-
     </div>
     <footer>
-        <div class="contact pos">
+        <div class="contact ">
             <div class="container"> Contact us :
                 <div class="socialMedia">
                     <a href="#">Twitter</a>
