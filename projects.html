@@ -29,6 +29,7 @@
             --body-bg-col: white;
             --desine-col: #ff1493;
             --btn-bg-col: white;
+            --card-parent-bg-col: rgb(242, 243, 246);
             --toggle-border-col: black;
 
         }
@@ -40,6 +41,7 @@
             --desine-col: #ff1493;
             --toggle-border-col: white;
             --btn-bg-col: black;
+            --card-parent-bg-col: #161719;
             transition: all .5s;
         }
 
@@ -106,12 +108,12 @@
             color: var(--desine-col);
         }
 
-        .pos{
+        .pos {
             position: relative;
             top: 50px;
         }
 
-        .cover{
+        .cover {
             background-image: url("./projects2.png");
             width: 100%;
             height: 43vh;
@@ -172,7 +174,7 @@
         }
 
         .contact {
-            margin-top: 20px;
+            /* margin-top: 20px; */
             padding-bottom: 20px;
             font-size: 13pt;
             font-weight: 700;
@@ -207,6 +209,7 @@
         }
 
         .card {
+            border-radius: 7px;
             width: 100%;
             height: 95%;
             display: flex;
@@ -234,6 +237,12 @@
         .card-title {
             font-size: 1.7rem;
             color: #ff1493;
+        }
+
+        .bgcol {
+            background: var(--card-parent-bg-col);
+            margin-top: 70px;
+            padding-bottom: 70px;
         }
 
         @media only screen and (max-width:1200px) {
@@ -288,7 +297,7 @@
                 padding: 0;
             }
 
-            .cover h1{
+            .cover h1 {
                 padding-left: 20px;
                 padding-right: 20px;
             }
@@ -303,7 +312,8 @@
                 right: 10px;
                 top: 10px;
             }
-            .cover{
+
+            .cover {
                 height: 30vh;
             }
 
@@ -365,80 +375,83 @@
             <p>Here, on TechSnap we provide some highly integrated projects on some core technologies.
                 Choose wisely so that it must be able to increase your chances of getting recruited.</p>
         </div>
-        <hr>
-        <!-- <h2 style="text-align: center;">Find which interests you the most</h2> -->
-        <div class="cards">
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://cssh.northeastern.edu/bari/wp-content/uploads/sites/30/2020/08/DATA-SCIENCE-PROJECTS.png"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"> Data Science Projects using python</h5>
-                    </div>
-                </div>
-            </a>
+        <!-- <hr> -->
+    </div>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://cdn.dribbble.com/users/1571442/screenshots/6356637/dribbbble_machinelearning_4x.png"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Machine Learning real world Projects</h5>
+    <div class="bgcol">
+        <div class="container pos">
+            <div class="cards">
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://cssh.northeastern.edu/bari/wp-content/uploads/sites/30/2020/08/DATA-SCIENCE-PROJECTS.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> Data Science Projects using python</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://i.pinimg.com/originals/a0/b9/7d/a0b97dd6c9600fac1714e2b7ad12f63f.png"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Web Development Projects</h5>
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://cdn.dribbble.com/users/1571442/screenshots/6356637/dribbbble_machinelearning_4x.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning real world Projects</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://d112uwirao0vo9.cloudfront.net/wp-content/uploads/2019/03/AI-Reduces-Errors-.jpeg"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Artificial Intelligence Projects using python</h5>
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://i.pinimg.com/originals/a0/b9/7d/a0b97dd6c9600fac1714e2b7ad12f63f.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development Projects</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://cdn3.iconfinder.com/data/icons/isometric-illustrations-6/350/523-512.png"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Deep Learning Projects</h5>
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://d112uwirao0vo9.cloudfront.net/wp-content/uploads/2019/03/AI-Reduces-Errors-.jpeg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Artificial Intelligence Projects using python</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://mk0digitallearn7ttjx.kinstacdn.com/wp-content/uploads/2018/05/Scope-of-data-analysis-booming-in-India-1000x600.jpg"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Data Analysis Projects</h5>
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://cdn3.iconfinder.com/data/icons/isometric-illustrations-6/350/523-512.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Deep Learning Projects</h5>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://mk0digitallearn7ttjx.kinstacdn.com/wp-content/uploads/2018/05/Scope-of-data-analysis-booming-in-India-1000x600.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analysis Projects</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
         </div>
-
 
     </div>
     <footer>
-        <div class="contact pos ">
+        <div class="contact  ">
             <div class="container"> Contact us :
                 <div class="socialMedia">
                     <a href="#">Twitter</a>
