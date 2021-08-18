@@ -28,7 +28,8 @@
             --body-bg-col: white;
             --desine-col: #ff1493;
             --btn-bg-col: white;
-            --card-parent-bg-col: rgb(242, 243, 246);
+            --card-parent-bg-col: #f0f0f3;
+            /* --card-parent-bg-col: #e5e8ef; */
             --toggle-border-col: black;
 
         }
@@ -40,7 +41,7 @@
             --desine-col: #ff1493;
             --toggle-border-col: white;
             --btn-bg-col: black;
-            --card-parent-bg-col: #161719;
+            --card-parent-bg-col: #1e1e1f;
             transition: all .5s;
         }
 
@@ -216,6 +217,7 @@
             background-color: var(--body-bg-col);
             /* background-image:linear-gradient(45deg,#ff1493,violet) ; */
             margin-bottom: 20px;
+            box-shadow: 1px 1px 15px rgb(0 0 0 / 5%);
         }
 
         .cards a {
@@ -233,11 +235,31 @@
         }
 
         .card-title {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             color: #ff1493;
         }
 
-        .bgcol{
+        .card-text {
+            padding: 0;
+            margin-bottom: 5px;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 16px 16px 16px;
+            width: 100%;
+        }
+
+        .status div {
+            padding: 1px 7px;
+            background-color: rgba(222, 8, 202, 0.24);
+            border-radius: 7px;
+            font-size: 13px;
+        }
+
+        .bgcol {
             background: var(--card-parent-bg-col);
             margin-top: 70px;
             padding-bottom: 70px;
@@ -302,10 +324,6 @@
             }
 
             nav h1 {
-                padding: 0;
-            }
-
-            .card-text {
                 padding: 0;
             }
 
@@ -393,6 +411,12 @@
                             <p class="card-text">Learn Data Science today and get to know everything about that involves
                                 data. </p>
                         </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px; font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
+                        </div>
                     </div>
                 </a>
 
@@ -403,6 +427,12 @@
                         <div class="card-body">
                             <h5 class="card-title">Intro to Machine Learning</h5>
                             <p class="card-text">Dive into Machine Learning today and take a step forward to AI.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
                         </div>
                     </div>
                 </a>
@@ -416,6 +446,12 @@
                             <h5 class="card-title">Data Analytics with SQL</h5>
                             <p class="card-text">Dive into some operations which are used to analyse the data.</p>
                         </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
+                        </div>
                     </div>
                 </a>
 
@@ -428,6 +464,12 @@
                             <h5 class="card-title">Full Stack Development</h5>
                             <p class="card-text">Learn Full Stack development and know everything about front-end and
                                 back-end of Websites.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
                         </div>
                     </div>
                 </a>
@@ -443,6 +485,12 @@
                                 simpler
                                 since Artificial Intelligence is our future.</p>
                         </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
+                        </div>
                     </div>
                 </a>
 
@@ -456,6 +504,13 @@
                             <p class="card-text">Learn basics of Deep Learning like neuralnetworks and much more to
                                 develop
                                 advanced applications.</p>
+                        </div>
+
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
                         </div>
                     </div>
                 </a>
