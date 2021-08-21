@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTORIALS</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Learners.css">
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            /* font-family: "Maven Pro", sans-serif; */
+            color: var(--heading-col);
+        }
+
+        :root {
+            --heading-col: black;
+            --text-col: black;
+            --body-bg-col: white;
+            --desine-col: #ff1493;
+            --btn-bg-col: white;
+            --card-parent-bg-col: #f0f0f3;
+            /* --card-parent-bg-col: #e5e8ef; */
+            --nav-bg-col:white;
+            --footer-text-col:#232323;
+            --toggle-border-col: black;
+            
+        }
+        
+        .dark-mood {
+            --heading-col: white;
+            --text-col: #b7b4b4;
+            --body-bg-col: black;
+            --desine-col: #ff1493;
+            --toggle-border-col: white;
+            --btn-bg-col: black;
+            --card-parent-bg-col: #1e1e1f;
+            --nav-bg-col:#19191a;
+            --footer-text-col:rgba(245, 245, 245, 0.788);
+            transition: all .5s;
+        }
+
+        body {
+            background-color: var(--body-bg-col);
+        }
+
+        #toggle {
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            border: 1px solid var(--toggle-border-col);
+            border-radius: 50%;
+            background-color: white;
+            right: 20px;
+            top: 30px;
+        }
+
+        .theme {
+            position: sticky;
+            top: 55px;
+            z-index: 2;
+        }
+
+        .navbar {
+            position: fixed;
+            background-color: var(--body-bg-col);
+            top: -.5px;
+            z-index: 1;
+            border-bottom: 1.4px solid var(--text-col);
+            transition: all .5s;
+        }
+
+        .navbar h1 {
+            display: flex;
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: var(--a-col);
+            padding-left: .5rem;
+            padding-right: .5rem;
+
+        }
+
+        .nav-link:hover {
+            --text-col: var(--desine-col);
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        a {
+            color: var(--a-col);
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        a:hover {
+            color: var(--desine-col);
+        }
+
+        .pos {
+            position: relative;
+            top: 50px;
+        }
+
+        .cover {
+            background-image: url("./photos/tutorials2.png");
+            width: 100%;
+            height: 43vh;
+            position: relative;
+            top: 70px;
+            display: flex;
+            align-items: flex-end;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+
+        }
+
+        .block {
+            padding-top: 20px;
+            width: 75%;
+        }
+
+        .block p {
+            font-size: 1.3rem;
+        }
+
+        h1 {
+            line-height: 1.5;
+        }
+
+        .explore {
+            padding-top: 64px;
+            width: 60%;
+        }
+
+        p {
+            color: var(--heading-col);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        button {
+            padding: 0;
+            border-radius: 5px;
+            background-color: var(--btn-bg-col);
+        }
+
+        button:hover {
+            background-color: var(--desine-col);
+        }
+
+        h1,
+        h2,
+        h5 {
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        h6 {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        .contact {
+            /* margin-top: 20px; */
+            padding-bottom: 20px;
+            font-size: 13pt;
+            font-weight: 700;
+            padding-left: 20px;
+            padding-top: 10px;
+            color: var(--heading-col);
+            /* background-color: var( --contact-bg-col); */
+            border-top: 1px solid var(--text-col);
+
+        }
+
+        .socialMedia {
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            font-weight: normal;
+            font-size: 11pt;
+        }
+
+        .socialMedia a {
+            font-weight: 500;
+            width: 216px;
+
+        }
+
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 29px;
+        }
+
+        .card {
+            border-radius: 7px;
+            width: 100%;
+            height: 95%;
+            display: flex;
+            justify-content: space-around;
+            border: none;
+            background-color: var(--body-bg-col);
+            /* background-image:linear-gradient(45deg,#ff1493,violet) ; */
+            margin-bottom: 20px;
+            box-shadow: 1px 1px 15px rgb(0 0 0 / 5%);
+        }
+
+        .cards a {
+            width: 33%;
+            text-decoration: none;
+            padding: 5px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 15rem;
+            padding: 16px;
+            padding-bottom: 0;
+            /* border: 2px solid #ff1493; */
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: #ff1493;
+        }
+
+        .card-text {
+            padding: 0;
+            margin-bottom: 5px;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 16px 16px 16px;
+            width: 100%;
+        }
+
+        .status div {
+            padding: 1px 7px;
+            background-color: rgba(222, 8, 202, 0.24);
+            border-radius: 7px;
+            font-size: 13px;
+        }
+
+        .bgcol {
+            background: var(--card-parent-bg-col);
+            margin-top: 70px;
+            padding-bottom: 70px;
+        }
+
+        @media only screen and (max-width:1200px) {
+            .cards a {
+                width: 49%;
+            }
+        }
+
+        @media only screen and (max-width:991px) {
+            .block {
+                width: 100%;
+                margin-top: 7%;
+                padding: 0;
+                height: auto;
+            }
+
+            .explore {
+                width: 100%;
+            }
+
+            .card {
+                flex-direction: column;
+                /* align-items: center; */
+            }
+
+            p {
+                text-align: justify;
+            }
+        }
+
+        @media only screen and (max-width:767px) {
+
+            .cards a {
+                width: 90%;
+            }
+
+            .block p {
+                font-size: 1.2rem;
+            }
+
+        }
+
+        @media only screen and (max-width:577px) {
+
+            p,
+            h1 {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            nav h1 {
+                padding: 0;
+            }
+
+            .cover h1 {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            #toggle {
+                width: 2rem;
+                height: 2rem;
+                right: 10px;
+                top: 23px;
+            }
+
+            .cover {
+                height: 30vh;
+            }
+
+
+        }
+
+        @media only screen and (max-width:477px) {
+
+            p,
+            .block p {
+                font-size: 1rem;
+            }
+
+            .navbar-brand {
+                font-size: 20px;
+            }
+
+            .cards a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section style="border-bottom: 1px solid black;" class="header">
+        <img id='logo' src="./assets/logo.jpg" alt="logo">
+        <div class="navItems">
+            <a href="##">About Us</a>
+            <a href="##">Our People</a>
+            <a href="##">Learn</a>
+            <button class="btn">Get Started</button>
+        </div>
+        <div class="Ham">
+            <img style="width: 22.85px;" id="menu_img" src="./assets/download (1).png" alt="Ham">
+        </div>
+    </section>
+    <!-- mobile menu --------------------------------------------- -->
+    <div class="dropMenu">
+        <ul>
+            <li><a href="##">About Us</a></li>
+            <li><a href="##">Our People</a></li>
+            <li><a href="##">Learn</a></li>
+            <button class="btn">Get Started</button>
+
+        </ul>
+        <div class="Close">X</div>
+    </div>
+
+    <div class="theme">
+        <img id="toggle" src="./photos/moon.png" alt="">
+    </div>
+
+    <div class="cover">
+
+        <h1 class="container" style="color: white;">TUTORIALS</h1>
+    </div>
+    <div class="container pos">
+        <div class="block" id="courses">
+            <p>Here, on TechSnap we provide quality information on available technologies which are in
+                demand and improve your existing skills/knowledge.
+            </p>
+            <p>Start today and get a glimpse of some technologies.</p>
+        </div>
+        <!-- <hr> -->
+
+    </div>
+
+    <div class="bgcol">
+        <div class="container pos">
+            <div class="cards">
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://www.esparkinfo.com/wp-content/uploads/2020/10/Analyzing-The-Reasons-Why-Python-Programming-Language.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Programming with Python</h5>
+                            <p class="card-text"> Begin your programming journey with beginner friendly language -
+                                Python.
+                            </p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top" src="https://codetru.com/images/all/datascience.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Basics of Data Science</h5>
+                            <p class="card-text">Learn Data Science from the scratch and get to know the basics of it.
+                            </p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top" src="https://miro.medium.com/max/1400/1*OdEUXKMKpM9DRNOXBQhGkA.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Machine Learning</h5>
+                            <p class="card-text">Learn very basics of machine learning.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://www.onlinecoursereport.com/wp-content/uploads/2020/07/shutterstock_394793860-1024x784.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">Get started with web development and build some basic web pages.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://www.paymentsjournal.com/wp-content/uploads/2021/05/v617-bb-04-technology-scaled.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Intro to Artificial Intelligence</h5>
+                            <p class="card-text">Get a glance of Artificial Intelligence and much more in it.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://cdn.educba.com/academy/wp-content/uploads/2020/01/Deep-Learning.jpg"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Deep Learning</h5>
+                            <p class="card-text">Learning basics of Deep learning may helps to grasp basics of
+                                Artificial
+                                Intelligence.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug 31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <footer style="border-top: 1px solid black;" class="Footer_conatiner">
+        <div class="Footer_header">
+            <img src="./assets/logo.jpg" alt="Logo">
+            <br><br>
+            <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
+                about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
+                JOBS AND REQUIRED SKILLS</p>
+            <br>
+            <p>As well we help you to submit your projects in your degree pursuing university and we help you by free
+                tutorials in Data science,AI, ML</p>
+        </div>
+        <div class="Footer_columns_holder">
+            <div class="Footer_columns">
+                <h1>Company</h1>
+                <a href="##">About us</a>
+                <a href="##">Learner stories</a>
+                <a href="##">our people</a>
+                <a href="##">jobs</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Resources</h1>
+                <a href="##">Learn</a>
+                <a href="##">Carrer path</a>
+                <a href="##">Internship</a>
+                <a href="##">Blogs</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Support</h1>
+                <a href="##">Contact us</a>
+                <a href="##">FAQ</a>
+                <a href="##">Any ideas, DM us</a>
+                <a href="##">Doc</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Services</h1>
+                <a href="##">Startup services</a>
+                <a href="##">Design services</a>
+                <a href="##">Projects</a>
+                <a href="##">Courses</a>
+            </div>
+        </div>
+    </footer>
+    <div class="Privacy_holder">
+        <div class="Privacy_links">
+            <a href="##">Privacy policy</a>
+            <a href="##">Cookies Notice</a>
+            <a href="##">Security</a>
+            <a href="##">Terms of use</a>
+        </div>
+        <div class="Social-media">
+            <img src="./assets/twitter.svg" />
+            <img src="./assets/facebook.svg" />
+            <img src="./assets/instagram.svg" />
+        </div>
+    </div>
+</body>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+
+
+
+    const mood = document.getElementById("toggle")
+    const menu_img = document.getElementById("menu_img")
+    mood.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mood")
+        if (document.body.classList.contains("dark-mood")) {
+            mood.src = "./photos/sun2.jpg"
+            menu_img.src="./assets/menu.png"
+        }
+        else {
+            mood.src = "./photos/moon.png"
+            menu_img.src="./assets/download (1).png"
+        }
+    })
+
+</script>
+
+<script>
+    // Animation------------------------------------
+    AOS.init({
+        duration: 900,
+        offset: 220,
+        easing: 'ease-in-out-quad'
+    });
+    //-----scroll-----------------
+    const ham = document.querySelector('.Ham');
+    const Close = document.querySelector(".Close");
+    const DropMenu = document.querySelector('.dropMenu')
+    window.addEventListener('scroll', () => {
+        const top = window.innerHeight * (10 / 100) + 300;
+        if (window.scrollY <= top) {
+            document.querySelector(".Scroll").style.display = 'none';
+
+        }
+        if (window.scrollY > top) {
+            document.querySelector(".Scroll").style.display = 'grid';
+        }
+    });
+    ham.addEventListener('click', () => {
+        DropMenu.classList.add("MenuAnimation")
+
+    })
+    Close.addEventListener('click', () => {
+        DropMenu.classList.remove('MenuAnimation')
+
+    })
+</script>
+
+
+</html>
