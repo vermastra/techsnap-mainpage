@@ -13,36 +13,46 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="./Learners.css">
 
     <style>
         * {
 
             box-sizing: border-box;
-            font-family: "Maven Pro", sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            /* font-family: "Maven Pro", sans-serif; */
             color: var(--heading-col);
 
         }
 
-        :root {
+        .light-mode {
             --heading-col: black;
             --text-col: black;
             --body-bg-col: white;
             --desine-col: #ff1493;
-            --btn-bg-col: white;
+            --btn-bg-col: #ff1493;
+            --btn-bg-hov-col: #ff4eb0;
+            --card-parent-bg-col: #f0f0f3;
+            /* --card-parent-bg-col: #e5e8ef; */
+            --nav-bg-col: white;
+            --footer-text-col: #232323;
             --toggle-border-col: black;
 
         }
 
-        .dark-mood {
+         :root{
+
             --heading-col: white;
             --text-col: #b7b4b4;
             --body-bg-col: black;
             --desine-col: #ff1493;
             --toggle-border-col: white;
             --btn-bg-col: black;
+            --btn-bg-hov-col:white;
+            --card-parent-bg-col: #1e1e1f;
+            --nav-bg-col: #19191a;
+            --footer-text-col: rgba(245, 245, 245, 0.788);
             transition: all .5s;
-
         }
 
         .darkmode-toggle {
@@ -55,15 +65,61 @@
         }
 
         #toggle {
-            width: 3rem;
-            height: 3rem;
-            position: absolute;
-            border: 1px solid var(--toggle-border-col);
-            border-radius: 50%;
-            background-color: white;
-            right: 20px;
-            top: 20px;
+            height: 30px;
+            width: 120px;
+            position: fixed;
+            border-radius: 50px;
+            padding: 0 7px;
+            left: 0px;
+            top: 250px;
+            transform: rotate(-90deg);
+            background-color: #e8e8e8;
+            display: flex;
+            justify-content: space-between;
         }
+
+        #move,.fixed {
+            border-radius: 50px;
+            height: 100%;
+            width: 3.7rem;
+            background-color: white;
+            align-content: center;
+            display: flex;
+            position: absolute;
+           
+            align-items: center;   
+        }
+        .fixed{
+            position: relative;
+            background-color: transparent;
+            z-index: -1;
+        }
+
+        #move p,.fixed p {
+            margin: auto;
+            display: flex;
+            padding-bottom: 3px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 3px;
+        }
+        #move{
+            box-shadow: -1px 0px 4px rgb(23 22 26 / 25%);
+            left: 65px;
+            transition: all .5s; 
+        }
+        .mode-animate {
+                /* transform: translatex(-65px); */
+                left: 0 !important;
+               
+        }
+        @media only screen and (max-width:1285px){
+            #toggle{
+                left: -33px;
+            }
+        }
+
+
 
         .theme {
             position: sticky;
@@ -111,10 +167,12 @@
 
         button a {
             display: block;
+            padding: 6px 12px;
+            color: white;
 
         }
 
-        a:hover {
+         a:hover {
             color: var(--desine-col);
         }
 
@@ -127,10 +185,11 @@
             border-bottom: 1px solid gray;
         }
 
-        .pos{
+        .pos {
             position: relative;
             top: 50px;
         }
+
         .block p {
             margin-top: 7%;
             margin-bottom: 7%;
@@ -156,11 +215,7 @@
             height: 19rem;
         }
 
-        /* .explore {
-            padding-top: 64px; 
-             width: 60%;
 
-        } */
 
         p {
             color: var(--text-col);
@@ -172,28 +227,32 @@
         button {
             padding: 0;
             border-radius: 5px;
-            background-color: var(--btn-bg-col);
-        }
-
-        button:hover {
+            border-color:#ced4da ;
             background-color: var(--desine-col);
+        }
+        
+        button:hover {
+            background-color: var(--btn-bg-hov-col);
         }
 
         button h5:hover,
         button a:hover {
-            color: white;
+            color: var(--body-bg-col);
         }
 
         .card {
-            margin-top: 70px;
+            /* margin-top: 70px; */
+            align-items: center;
             padding: 50px;
             padding-left: 0;
             padding-right: 0;
             display: flex;
+            min-height: 84vh;
             flex-direction: row;
             justify-content: space-around;
             border-color: var(--toggle-border-col);
             background-color: var(--body-bg-col);
+            border: none;
 
             /* background-image:linear-gradient(45deg,#ff1493,violet) ; */
         }
@@ -205,28 +264,69 @@
 
         .login {
             text-align: center;
-            padding: 27px;
-            /* background-color: black; */
+            padding: 16px;
+            background-color: white;
+        }
+
+        .login button {
+            width: 100%;
+            background-color: #ff1493;
+            border-color: #ced4da;
+
+        }
+        .login button:hover{
+            background-color: var(--btn-bg-hov-col);
         }
 
         form {
-            background-color: var(--body-bg-col);
+            /* background-color: var(--body-bg-col); */
+            background-color: white;
             width: 24rem;
             border: 3px solid #ff1493;
             border-radius: 8px;
-            height: 29rem;
+            height: 28rem;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            /* justify-content: center; */
 
         }
 
+        .google {
+            display: flex;
+            margin: auto;
+            width: 8.5rem;
+            border: 1px solid #ced4da;
+            justify-content: center;
+            align-items: center;
+            padding: 6px;
+            border-radius: 7px;
+            /* margin-bottom: 5px; */
+        }
+        .google a{
+            color: black;
+        }
+        .google a:hover{
+            color: #ff1493;
+        }
+
+
+        .underline__or {
+            height: 0;
+        }
+
+        .or {
+            position: relative;
+            top: -28px;
+            background-color: white;
+        }
+
         input {
-            padding-left: 5px;
+            padding: 6px 12px;
             width: 100%;
             margin-top: 8px;
             border-radius: 5px;
             outline: none;
+            border-color: #ced4da;
             color: black;
         }
 
@@ -238,22 +338,23 @@
 
         .login .form-element {
             text-align: left;
-            margin-top: 35px;
+            margin-top: 16px;
         }
 
         button h5 {
             padding: .5rem;
             margin: 0;
+            text-align: center;
+            color: white;
         }
 
-        h1
-         {
+        h1 {
             margin-bottom: 0;
             font-weight: 600;
 
         }
-        h6
-         {
+
+        h6 {
             margin-bottom: 0;
             font-weight: 500;
 
@@ -334,6 +435,9 @@
             p {
                 text-align: justify;
             }
+            .theme{
+                display: none;
+            }
 
         }
 
@@ -344,9 +448,11 @@
                 padding-left: 8px;
                 padding-right: 8px;
             }
-            .block p{
+
+            .block p {
                 font-size: 1.1rem;
             }
+
             nav h1 {
                 padding: 0;
             }
@@ -363,14 +469,14 @@
                 width: 2rem;
                 height: 2rem;
                 right: 10px;
-                top: 10px;
+                top: 23px;
             }
         }
 
         @media only screen and (max-width:477px) {
             form {
                 width: 20rem;
-                height: 26rem;
+                height: 26.7rem;
             }
 
             form h6 {
@@ -401,33 +507,49 @@
 <body>
 
 
-    <nav class=" container-fluid navbar navbar-expand-lg navbar-light  ">
-        <div class="container ">
-            <h1><a style=" padding: 0;" class="navbar-brand" href="#">TechSnap</a>
-            </h1>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <h6><a style="color: var( --text-col);" class="nav-link active" aria-current="page"
-                                href="#">HOME</a></h6>
-                    </li>
-                    <li class="nav-item">
-                        <h6><a style="color: var( --text-col);" class="nav-link active" href="#">ABOUT US</a></h6>
-                    </li>
-                </ul>
-            </div>
+
+    <section style="border-bottom: 1px solid black;" class="header">
+        <img id='logo' src="./assets/logo_pink[bg].jpg" alt="logo">
+        <div class="navItems">
+            <a href="##">About Us</a>
+            <a href="##">Our People</a>
+            <a href="##">Learn</a>
+            <button class="btn">Get Started</button>
         </div>
-    </nav>
+        <div class="Ham">
+            <img style="width: 22.85px;" id="menu_img" src="./assets/menu.png" alt="Ham">
+        </div>
+    </section>
+    <!-- mobile menu --------------------------------------------- -->
+    <div class="dropMenu">
+        <ul>
+            <li><a href="##">About Us</a></li>
+            <li><a href="##">Our People</a></li>
+            <li><a href="##">Learn</a></li>
+            <button class="btn">Get Started</button>
+
+        </ul>
+        <div class="Close">X</div>
+    </div>
 
     <div class="theme">
-        <img id="toggle" src="./moon.png" alt="">
+        <!-- <img id="toggle" src="./photos/moon.png" alt=""> -->
+        <div id="toggle">
+            <div class="fixed">
+                <p style="color: #6A696C;">Light</p>
+            </div>
+            <div id="move">
+                <p style="color: black;" id="move_text">Dark</p>
+            </div>
+            <div class="fixed">
+                <p style="color: #6A696C;">Dark</p>
+            </div>
+        </div>
+
     </div>
-    <div class="container pos ">
+
+
+    <div style="padding-bottom: 65px;" class="container pos ">
         <div class="block">
             <div class="content">
                 <h1><span style="color: #ff1493;">FREE</span> PROJECTS AND <br> TUTORIALS</h1>
@@ -441,7 +563,7 @@
             </div>
         </div>
 
-<!-- class explore -->
+        <!-- class explore -->
         <div class=" block explore" id="courses">
             <div class="content">
                 <h1>COURSES</h1>
@@ -452,10 +574,10 @@
                 <p>So what are you waiting for? Explore our in-demand technologies based courses which may adds value to
                     your career.
                 </p>
-                <button><a href="./courses.html" target="_blank">GET STARTED</a></button>
+                <button><a href="./courses.html" >GET STARTED</a></button>
             </div>
             <div class="img">
-                <img class="gif" src="./course1.png" alt="">
+                <img class="gif" src="./photos/course1.png" alt="">
             </div>
         </div>
 
@@ -469,10 +591,10 @@
                 <p>It's obvious that applying helps us to enhance existing skills and possibly upgrades
                     your resume/cv, may makes our employable chances higher.
                 </p>
-                <button><a href="./projects.html" target="_blank">GET STARTED</a></button>
+                <button><a href="./projects.html" >GET STARTED</a></button>
             </div>
             <div class="img">
-                <img class="gif" src="./projects1.png" alt="">
+                <img class="gif" src="./photos/—Pngtree—a man who works at_5361911.png" alt="">
             </div>
         </div>
 
@@ -486,10 +608,10 @@
                 <p>Easy to learn and skip to the topics where you are not confident about.
                     Let's get started with our utmost tutorials on trending skills.
                 </p>
-                <button><a href="./tutorials.html" target="_blank">GET STARTED</a></button>
+                <button><a href="./tutorials.html" >GET STARTED</a></button>
             </div>
             <div class="img">
-                <img class="gif" src="./tutorials1-1.png" alt="">
+                <img class="gif" src="./photos/tutorials1-1.png" alt="">
             </div>
         </div>
 
@@ -498,76 +620,157 @@
                 <h1><span style="color: #ed0181;"> JOIN US TODAY</span></h1>
                 <h4> <span> To get access to various trending courses, projects and much more for free.</span></h4>
                 <div>
-                    <img id="no-bg" src="./techsnap_prev_ui.png" alt="">
+                    <!-- <img id="no-bg" src="./photos/techsnap_prev_ui.png" alt=""> -->
+                    <img style="width: 100%;" src="./photos/—Pngtree—cartoon employee discussing work_4538195.png"
+                        alt="">
                 </div>
             </div>
+
             <form action="#">
                 <div class="login">
-                    <h3>CREATE YOUR ACCOUNT</h3>
-                    <h6><a href="#">GOOGLE</a> | <a href="#">LINKEDIN</a> | <a href="#">FACEBOOK</a></h6>
-                    <div class="form-element">
+                    <h3 style="margin: 14px;color: black;">CREATE YOUR FREE ACCOUNT</h3>
+                    <div class="google">
+                        <!-- <a href="#"> -->
+                            <img style="width: 1.5rem;"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIAqKNPSxidvLJv-2wJtis24OZFMdGlt9IV6OtSeh0h77C9ZItFjTk373jd5jS7HgimY&usqp=CAU"
+                                alt="">
+                            <h6> <a  href="#">GOOGLE</a> </h6>
+                        <!-- </a> -->
+                    </div>
+                    <div class="underline__or">
+                        <hr style="color:#3a3737;">
+                        <span style="color: black;" class="or">OR</span>
+                    </div>
 
-                        <h6>EMAIL :</h6>
+                    <div class="form-element">
+                        <h6 style="color: black;">EMAIL :</h6>
                         <input type="email" name="email" placeholder="Email Address" required>
                     </div>
                     <div class="form-element">
 
-                        <h6>PASSWORD :</h6>
+                        <h6 style="color: black;">PASSWORD :</h6>
                         <input type="password" name="password" placeholder="Password" required>
                     </div>
                     <button class="form-element" type="submit">
                         <h5> START LEARNING</h5>
                     </button>
+                    <h6 style="margin-top: 14px; color: black;">Have Account? <a href="#">Login Here</a></h6>
                 </div>
             </form>
         </div>
-
-
-
     </div>
 
-    <footer>
-        <div class="contact pos ">
-            <div class="container"> Contact us :
-                <div class="socialMedia">
-                    <a href="#">Twitter</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Github</a>
-                    <a href="#">Dribbble</a>
-                    <a href="#">Tumblr </a>
-                </div>
+    <footer style="border-top: 1px solid black;" class="Footer_conatiner">
+        <div class="Footer_header">
+            <img src="./assets/logo_pink[bg].jpg" alt="Logo">
+            <br><br>
+            <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
+                about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
+                JOBS AND REQUIRED SKILLS</p>
+            <br>
+            <p>As well we help you to submit your projects in your degree pursuing university and we help you by free
+                tutorials in Data science,AI, ML</p>
+        </div>
+        <div class="Footer_columns_holder">
+            <div class="Footer_columns">
+                <h1>Company</h1>
+                <a href="##">About us</a>
+                <a href="##">Learner stories</a>
+                <a href="##">our people</a>
+                <a href="##">jobs</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Resources</h1>
+                <a href="##">Learn</a>
+                <a href="##">Carrer path</a>
+                <a href="##">Internship</a>
+                <a href="##">Blogs</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Support</h1>
+                <a href="##">Contact us</a>
+                <a href="##">FAQ</a>
+                <a href="##">Any ideas, DM us</a>
+                <a href="##">Doc</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Services</h1>
+                <a href="##">Startup services</a>
+                <a href="##">Design services</a>
+                <a href="##">Projects</a>
+                <a href="##">Courses</a>
             </div>
         </div>
     </footer>
-
+    <div class="Privacy_holder">
+        <div class="Privacy_links">
+            <a href="##">Privacy policy</a>
+            <a href="##">Cookies Notice</a>
+            <a href="##">Security</a>
+            <a href="##">Terms of use</a>
+        </div>
+        <div class="Social-media">
+            <img src="./assets/twitter.svg" />
+            <img src="./assets/facebook.svg" />
+            <img src="./assets/instagram.svg" />
+        </div>
+    </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 
-   
-
-
-    navbar = document.querySelector(".navbar");
     const mood = document.getElementById("toggle")
+    const move = document.getElementById("move")
+    const move_text = document.getElementById("move_text")
+    const menu_img = document.getElementById("menu_img")
     mood.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mood")
-        if (document.body.classList.contains("dark-mood")) {
-            mood.src = "./sun2.jpg"
-            navbar.classList.add("navbar-dark")
-            navbar.classList.remove("navbar-light")
+        document.body.classList.toggle("light-mode")
+        move.classList.toggle("mode-animate")
+        if (document.body.classList.contains("light-mode")) {
+            // mood.src = "./photos/sun2.jpg"
+            menu_img.src = "./assets/download (1).png"
+            move_text.innerHTML="Light" 
         }
         else {
-            mood.src = "./moon.png"
-            navbar.classList.add("navbar-light")
-            navbar.classList.remove("navbar-dark")
+            // mood.src = "./photos/moon.png"
+            menu_img.src = "./assets/menu.png"
+            move_text.innerHTML="Dark"
         }
     })
 
 </script>
+
+<script>
+    // Animation------------------------------------
+    AOS.init({
+        duration: 900,
+        offset: 220,
+        easing: 'ease-in-out-quad'
+    });
+    //-----scroll-----------------
+    const ham = document.querySelector('.Ham');
+    const Close = document.querySelector(".Close");
+    const DropMenu = document.querySelector('.dropMenu')
+    window.addEventListener('scroll', () => {
+        const top = window.innerHeight * (10 / 100) + 300;
+        if (window.scrollY <= top) {
+            document.querySelector(".Scroll").style.display = 'none';
+
+        }
+        if (window.scrollY > top) {
+            document.querySelector(".Scroll").style.display = 'grid';
+        }
+    });
+    ham.addEventListener('click', () => {
+        DropMenu.classList.add("MenuAnimation")
+
+    })
+    Close.addEventListener('click', () => {
+        DropMenu.classList.remove('MenuAnimation')
+
+    })
+</script>
+
 
 </html>

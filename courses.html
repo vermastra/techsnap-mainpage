@@ -13,32 +13,44 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="./cor.css"> -->
+    <link rel="stylesheet" href="./Learners.css">
     <style>
         * {
 
             box-sizing: border-box;
-            font-family: "Maven Pro", sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            /* font-family: "Maven Pro", sans-serif; */
             color: var(--heading-col);
         }
 
-        :root {
+        .light-mode {
             --heading-col: black;
             --text-col: black;
             --body-bg-col: white;
             --desine-col: #ff1493;
             --btn-bg-col: white;
+            --card-parent-bg-col: #f0f0f3;
+            /* --card-parent-bg-col: #e5e8ef; */
+            --nav-bg-col: white;
+            --btn-bg-hov-col: #ff4eb0;
+            --learners-bg-col: linear-gradient(45deg, #ff1493, white, violet);
+            --footer-text-col: #232323;
             --toggle-border-col: black;
 
         }
 
-        .dark-mood {
+        :root {
             --heading-col: white;
             --text-col: #b7b4b4;
             --body-bg-col: black;
             --desine-col: #ff1493;
             --toggle-border-col: white;
             --btn-bg-col: black;
+            --card-parent-bg-col: #1e1e1f;
+            --nav-bg-col: #19191a;
+            --btn-bg-hov-col: white;
+            --learners-bg-col: linear-gradient(45deg, #ff1493, black, violet);
+            --footer-text-col: rgba(245, 245, 245, 0.788);
             transition: all .5s;
         }
 
@@ -47,15 +59,66 @@
         }
 
         #toggle {
-            width: 3rem;
-            height: 3rem;
-            position: absolute;
-            border: 1px solid var(--toggle-border-col);
-            border-radius: 50%;
-            background-color: white;
-            right: 20px;
-            top: 20px;
+            height: 30px;
+            width: 120px;
+            position: fixed;
+            border-radius: 50px;
+            padding: 0 7px;
+            left: 0px;
+            top: 250px;
+            transform: rotate(-90deg);
+            background-color: #e8e8e8;
+            display: flex;
+            justify-content: space-between;
         }
+
+        #move,
+        .fixed {
+            border-radius: 50px;
+            height: 100%;
+            width: 3.7rem;
+            background-color: white;
+            align-content: center;
+            display: flex;
+            position: absolute;
+
+            align-items: center;
+        }
+
+        .fixed {
+            position: relative;
+            background-color: transparent;
+            z-index: -1;
+        }
+
+        #move p,
+        .fixed p {
+            margin: auto;
+            display: flex;
+            padding-bottom: 3px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 3px;
+        }
+
+        #move {
+            box-shadow: -1px 0px 4px rgb(23 22 26 / 25%);
+            left: 61px;
+            transition: all .5s;
+        }
+
+        .mode-animate {
+            /* transform: translatex(-65px); */
+            left: 0 !important;
+
+        }
+
+        @media only screen and (max-width:1285px) {
+            #toggle {
+                left: -33px;
+            }
+        }
+
 
         .theme {
             position: sticky;
@@ -104,22 +167,127 @@
         a:hover {
             color: var(--desine-col);
         }
-        .pos{
+
+        .pos {
             position: relative;
-            top: 50px;
+            /* top: 50px; */
         }
 
-        .cover{
-            background-image: url("./courses2.png");
+        .cover {
+            background-image: url("./photos/courses2.png");
             width: 100%;
             height: 43vh;
             position: relative;
-            top: 50px;
+            top: 70px;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             background-size: 100% 100%;
             background-repeat: no-repeat;
+            /* margin-bottom: 10px;s */
+            flex-direction: column;
+            justify-content: center;
         }
+
+        button {
+            padding: 0;
+            border-radius: 5px;
+            border-color: #ced4da;
+            background-color: var(--desine-col);
+        }
+
+        button a {
+            display: block;
+            padding: 6px 18px;
+            color: white;
+        }
+
+        button a:hover {
+            color: var(--body-bg-col);
+        }
+
+        button:hover {
+            background-color: var(--btn-bg-hov-col);
+        }
+
+        .lovedby {
+            display: flex;
+            padding: 24px 16px;
+            justify-content: space-evenly;
+            width: 100%;
+            background-color: #F2F4FF;
+            flex-wrap: wrap;
+        }
+
+        .lovedimg {
+            width: 83.333%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .lovedtext {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: black;
+        }
+
+        .limg {
+            /* width: 25%; */
+            display: flex;
+            margin: 5px;
+        }
+
+        .why {
+            position: relative;
+            top: 70px;
+            padding: 20px;
+        }
+
+        .why .whychild {
+            padding: 0 20px 20px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .ans {
+            margin-top: 20px;
+            width: 48%;
+            display: flex;
+            height: 115px;
+            padding: 10px;
+            background-color: #f2f4ff;
+        }
+
+        .aimg {
+            /* background-color: rgb(35, 61, 77); */
+            background-color: rgb(14 50 73);
+            width: 20%;
+            display: flex;
+            border-radius: 7px;
+            margin-right: 20px;
+        }
+
+        .aimg img {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .anstext {
+            width: 96%;
+            /* display: flex; */
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .anstext h3 {
+            font-size: 1.4rem;
+        }
+
+
+
         .block {
             padding-top: 20px;
             width: 75%;
@@ -145,15 +313,15 @@
             font-size: 1.1rem;
         }
 
-        button {
+        /* button {
             padding: 0;
             border-radius: 5px;
             background-color: var(--btn-bg-col);
-        }
+        } */
 
-        button:hover {
+        /* button:hover {
             background-color: var(--desine-col);
-        }
+        } */
 
         h1,
         h2,
@@ -168,7 +336,7 @@
         }
 
         .contact {
-            margin-top: 20px;
+            /* margin-top: 20px; */
             padding-bottom: 20px;
             font-size: 13pt;
             font-weight: 700;
@@ -203,6 +371,7 @@
         }
 
         .card {
+            border-radius: 7px;
             width: 100%;
             height: 95%;
             display: flex;
@@ -211,6 +380,7 @@
             background-color: var(--body-bg-col);
             /* background-image:linear-gradient(45deg,#ff1493,violet) ; */
             margin-bottom: 20px;
+            box-shadow: 1px 1px 15px rgb(0 0 0 / 5%);
         }
 
         .cards a {
@@ -228,8 +398,94 @@
         }
 
         .card-title {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
             color: #ff1493;
+        }
+
+        .card-text {
+            padding: 0;
+            margin-bottom: 5px;
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 16px 16px 16px;
+            width: 100%;
+        }
+
+        .status div {
+            padding: 1px 7px;
+            background-color: rgba(222, 8, 202, 0.24);
+            border-radius: 7px;
+            font-size: 13px;
+        }
+
+        .bgcol {
+            background: var(--card-parent-bg-col);
+            position: relative;
+            top: 70px;
+            padding-bottom: 40px;
+        }
+
+        .lparent {
+            position: relative;
+            top: 70px;
+            padding: 40px 0;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .learners {
+            display: flex;
+            flex-direction: row;
+
+            flex-wrap: wrap;
+            /* width: fit-content; */
+        }
+
+        .learners .card {
+            width: 330px;
+            box-shadow: 1px 1px 9px grey;
+            height: auto;
+            justify-content: initial;
+            display: flex;
+            align-items: center;
+            margin: 16px 16px;
+            padding: 16px 16px 24px;
+            background-image: linear-gradient(45deg, #ff1493, violet);
+            /* background-image: var(--learners-bg-col); */
+
+        }
+
+        .learner-img {
+            border-radius: 50% !important;
+            height: 100px !important;
+            margin: 16px auto;
+            padding: 0 !important;
+            width: auto !important;
+        }
+
+        .labout {
+            font-size: 16px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .lposition {
+            font-size: 12px;
+            margin-bottom: 16px;
+        }
+
+        .lbody p {
+            font-size: 14px;
+            text-align: justify;
+            margin-bottom: 0;
         }
 
         @media only screen and (max-width:1200px) {
@@ -252,11 +508,28 @@
 
             .card {
                 flex-direction: column;
-                align-items: center;
+                /* align-items: center; */
             }
 
             p {
                 text-align: justify;
+            }
+
+            .why .whychild {
+                flex-direction: column;
+                align-content: center;
+            }
+
+            .ans {
+                width: 35rem;
+                height: 112.35px;
+            }
+
+            .why h2 {
+                text-align: center;
+            }
+            .theme{
+                display: none;
             }
 
         }
@@ -276,23 +549,25 @@
         @media only screen and (max-width:577px) {
 
             p,
-            h1  {
+            h1 {
                 padding-left: 8px;
                 padding-right: 8px;
             }
 
-            .cover h1{
+            .cover h1 {
                 padding-left: 20px;
                 padding-right: 20px;
             }
-            .cover{
-                height: 30vh;
-            }
-            nav h1 {
-                padding: 0;
+
+            .cover {
+                height: 91vh;
+                top: 70px;
+                text-align: center;
+                justify-content: center;
+                background-size: 100% 100%;
             }
 
-            .card-text {
+            nav h1 {
                 padding: 0;
             }
 
@@ -300,7 +575,48 @@
                 width: 2rem;
                 height: 2rem;
                 right: 10px;
-                top: 10px;
+                top: 23px;
+            }
+
+            .cover p {
+                text-align: inherit;
+            }
+
+            .lovedby {
+                padding: 10px;
+            }
+
+            .lovedtext {
+                font-size: 21px;
+            }
+
+            .limg {
+                width: 20%;
+            }
+
+            .limg img {
+                width: 100%;
+            }
+
+            .why .whychild {
+                padding: 0;
+            }
+
+            .ans {
+                width: 100%;
+            }
+
+            .aimg {
+                width: 7rem;
+            }
+
+            .anstext p {
+                font-size: 1rem;
+                padding: 0;
+            }
+
+            .anstext h3 {
+                font-size: 1.1rem;
             }
 
 
@@ -320,167 +636,413 @@
             .cards a {
                 width: 100%;
             }
+
+            .aimg {
+                width: 5.2rem;
+            }
+
+            .anstext p {
+                font-size: .85rem;
+            }
+
+            .ans {
+                height: auto;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <nav class=" container-fluid navbar navbar-expand-lg navbar-light  ">
-        <div class="container ">
-            <h1><a style=" padding: 0;" class="navbar-brand" href="#">TechSnap</a>
-            </h1>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <h6><a style="color: var( --text-col);" class="nav-link active" aria-current="page"
-                                href="#">HOME</a></h6>
-                    </li>
-                    <li class="nav-item">
-                        <h6><a style="color: var( --text-col);" class="nav-link active" href="#">ABOUT US</a></h6>
-                    </li>
-                </ul>
-            </div>
+
+    <section style="border-bottom: 1px solid black;" class="header">
+        <img id='logo' src="./assets/logo_pink[bg].jpg" alt="logo">
+        <div class="navItems">
+            <a href="##">About Us</a>
+            <a href="##">Our People</a>
+            <a href="##">Learn</a>
+            <button class="btn">Get Started</button>
         </div>
-    </nav>
+        <div class="Ham">
+            <img style="width: 22.85px;" id="menu_img" src="./assets/menu.png" alt="Ham">
+        </div>
+    </section>
+    <!-- mobile menu --------------------------------------------- -->
+    <div class="dropMenu">
+        <ul>
+            <li><a href="##">About Us</a></li>
+            <li><a href="##">Our People</a></li>
+            <li><a href="##">Learn</a></li>
+            <button class="btn">Get Started</button>
+
+        </ul>
+        <div class="Close">X</div>
+    </div>
 
     <div class="theme">
-        <img id="toggle" src="./moon.png" alt="">
+        <!-- <img id="toggle" src="./photos/moon.png" alt=""> -->
+        <div id="toggle">
+            <div class="fixed">
+                <p style="color: #6A696C;">Light</p>
+            </div>
+            <div id="move">
+                <p style="color: black;" id="move_text">Dark</p>
+            </div>
+            <div class="fixed">
+                <p style="color: #6A696C;">Dark</p>
+            </div>
+        </div>
+
     </div>
 
     <div class="cover">
-        <h1 class="container" style="color: white;">COURSES</h1>
-    </div>
-    <div class="container pos">
-        <div class="block" id="courses">
-            <p>Here, on TechSnap we provide the courses which are in-demand that adds value to your resume
+        <h1 class="container" style="color: white; text-align: center;">TECHSNAP COURSES</h1>
+        <div class="container pos">
+            <p style="color: white;font-size: 1.2rem;text-align: center;">Here, on TechSnap we provide the courses which
+                are in-demand that
+                adds value to your resume
                 and enhances your skillset.
             </p>
-            <p>Dive deep into the course which you want to master and start learning today.</p>
         </div>
-        <hr>
-        <h2 style="text-align: center;">Find which interests you the most</h2>
-        <div class="cards">
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src=" https://yyb7613mjr31k8vxr4692ftk-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/d6aa5176-statistics-for-data-science-courses.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title"> Data Science using python</h5>
-                        <p class="card-text">Learn Data Science today and get to know everything about that involves
-                            data. </p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top" src=" https://thumbs.gfycat.com/AshamedWeightyDachshund-max-1mb.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Intro to Machine Learning</h5>
-                        <p class="card-text">Dive into Machine Learning today and take a step forward to AI.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://cdn.dribbble.com/users/1523313/screenshots/13671653/data-analysis.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Data Analytics with SQL</h5>
-                        <p class="card-text">Dive into some operations which are used to analyse the data.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://www.sithcomputers.com/wp-content/uploads/2021/02/Full-Stack-Developer-1.gif "
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Full Stack Development</h5>
-                        <p class="card-text">Learn Full Stack development and know everything about front-end and
-                            back-end of Websites.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top" src="https://www.weblineindia.com/wp-content/uploads/2019/08/Business.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Intro to Artificial Intelligence</h5>
-                        <p class="card-text">Take the first step to get into AI and develop things to make them simpler
-                            since Artificial Intelligence is our future.</p>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="card">
-                    <img class="card-img-top"
-                        src="https://cdn.dribbble.com/users/2020096/screenshots/4389020/intro-2.gif"
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Deep Learning</h5>
-                        <p class="card-text">Learn basics of Deep Learning like neuralnetworks and much more to develop
-                            advanced applications.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-
+        <button><a href="#explore_jump">Explore</a></button>
+        <!-- <div class="block" id="courses">
+                <p>Dive deep into the course which you want to master and start learning today.</p>
+            </div> -->
+        <!-- <hr> -->
     </div>
-    <footer>
-        <div class="contact pos">
-            <div class="container"> Contact us :
-                <div class="socialMedia">
-                    <a href="#">Twitter</a>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Github</a>
-                    <a href="#">Dribbble</a>
-                    <a href="#">Tumblr </a>
+    
+    <div style="background-color: #F2F4FF; position: relative;top: 70px;">
+        <div class="lovedby container">
+            <div class="lovedtext">Loved by learners at</div>
+            <div class="lovedimg">
+                <div class="limg">
+                    <img src="	https://dphi.s3.ap-south-1.amazonaws.com/company_logos/google.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="https://dphi.s3.ap-south-1.amazonaws.com/company_logos/ibm.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="	https://dphi.s3.ap-south-1.amazonaws.com/company_logos/harvard.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="https://dphi.s3.ap-south-1.amazonaws.com/company_logos/yale.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="	https://dphi.s3.ap-south-1.amazonaws.com/company_logos/paypal.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="	https://dphi.s3.ap-south-1.amazonaws.com/company_logos/kuleuven.svg" alt="">
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="why container ">
+        <h2>Why Techsnap Courses ?</h2>
+        <div class="whychild  ">
+            <div class="ans">
+                <div class="aimg">
+                    <img src="./assets/strctured-learning.png" alt="">
+                </div>
+                <div class="anstext">
+                    <h3 style="color: black;">Structured Learning</h3>
+                    <p style="margin: 0; color: black;">Guided learning paths for learners at various levels </p>
+                </div>
+            </div>
+            <div class="ans">
+                <div class="aimg">
+                    <img src="./assets/real.png" alt="">
+                </div>
+                <div class="anstext">
+                    <h3 style="color: black;">Real-world Challenges</h3>
+                    <p style="margin: 0;color: black;">Practice and enhance your skills on real world data projects </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgcol" id="explore_jump">
+        <div style="padding-top: 5rem;" class="container pos">
+            <h2 style="text-align: center;">Find which interests you the most</h2>
+            <div class="cards">
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src=" https://yyb7613mjr31k8vxr4692ftk-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/d6aa5176-statistics-for-data-science-courses.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> Data Science using python</h5>
+                            <p class="card-text">Learn Data Science today and get to know everything about that involves
+                                data. </p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px; font-size: 14px;">Jul 26th-Aug
+                                        31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top" src=" https://thumbs.gfycat.com/AshamedWeightyDachshund-max-1mb.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Intro to Machine Learning</h5>
+                            <p class="card-text">Dive into Machine Learning today and take a step forward to AI.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug
+                                        31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://cdn.dribbble.com/users/1523313/screenshots/13671653/data-analysis.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Analytics with SQL</h5>
+                            <p class="card-text">Dive into some operations which are used to analyse the data.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug
+                                        31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://www.sithcomputers.com/wp-content/uploads/2021/02/Full-Stack-Developer-1.gif "
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Full Stack Development</h5>
+                            <p class="card-text">Learn Full Stack development and know everything about front-end and
+                                back-end of Websites.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug
+                                        31st</span></li>
+                            </ul>
+                            <div style="background-color: #9b969b3d;">Completed</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://www.weblineindia.com/wp-content/uploads/2019/08/Business.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Intro to Artificial Intelligence</h5>
+                            <p class="card-text">Take the first step to get into AI and develop things to make them
+                                simpler
+                                since Artificial Intelligence is our future.</p>
+                        </div>
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug
+                                        31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="card">
+                        <img class="card-img-top"
+                            src="https://cdn.dribbble.com/users/2020096/screenshots/4389020/intro-2.gif"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Deep Learning</h5>
+                            <p class="card-text">Learn basics of Deep Learning like neuralnetworks and much more to
+                                develop
+                                advanced applications.</p>
+                        </div>
+
+                        <div class="status">
+                            <ul style="padding-left: 16px;  margin-bottom: 0;">
+                                <li><span style="position: relative; left: -7px;font-size: 14px;">Jul 26th-Aug
+                                        31st</span></li>
+                            </ul>
+                            <div>Coming Soon</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="lparent">
+        <h2 style="text-align: center; margin-bottom: 1rem;">See what Our Learners are Saying</h2>
+        <div class="learners ">
+            <div class="card">
+                <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
+                <h6 class="labout">Giovanna Reggina Galleno Malaga | Milan - Italy</h6>
+                <p class="lposition">Soft Skills Trainer
+                </p>
+                <div class="lbody">
+                    <p>I feel so lucky of being part of this amazing community that has helped me to change my life.
+                        Thank
+                        you so much DPhi team and coaches for making this possible!</p>
+
+                </div>
+            </div>
+            <div class="card">
+                <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
+                <h6 class="labout">Deeksha Singh | Hyderabad, India</h6>
+                <p class="lposition">Invenory Specialist</p>
+                <div class="lbody">
+                    <p>I couldn’t have asked for a better start to my Data Science journey. I will forever be grateful
+                        to
+                        the entire team of Dphi for putting in all the efforts and ensuring a hassle free, rich learning
+                        experience for all of us.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
+                <h6 class="labout">Rackson Mathias | Calgary, Canada </h6>
+                <p class="lposition">Web Developer</p>
+                <div class="lbody">
+                    <p>I am always very enthusiastic about getting accurate information from data as well as making
+                        sound
+                        predictions. DPhi has greatly helped in fine-tuning my knowledge and practices. I intend to
+                        apply my
+                        learnings in deploying models in environmental systems as well as in business analytics.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer style="border-top: 1px solid black;" class="Footer_conatiner">
+        <div class="Footer_header">
+            <img src="./assets/logo_pink[bg].jpg" alt="Logo">
+            <br><br>
+            <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
+                about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
+                JOBS AND REQUIRED SKILLS</p>
+            <br>
+            <p>As well we help you to submit your projects in your degree pursuing university and we help you by free
+                tutorials in Data science,AI, ML</p>
+        </div>
+        <div class="Footer_columns_holder">
+            <div class="Footer_columns">
+                <h1>Company</h1>
+                <a href="##">About us</a>
+                <a href="##">Learner stories</a>
+                <a href="##">our people</a>
+                <a href="##">jobs</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Resources</h1>
+                <a href="##">Learn</a>
+                <a href="##">Carrer path</a>
+                <a href="##">Internship</a>
+                <a href="##">Blogs</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Support</h1>
+                <a href="##">Contact us</a>
+                <a href="##">FAQ</a>
+                <a href="##">Any ideas, DM us</a>
+                <a href="##">Doc</a>
+            </div>
+            <div class="Footer_columns">
+                <h1>Services</h1>
+                <a href="##">Startup services</a>
+                <a href="##">Design services</a>
+                <a href="##">Projects</a>
+                <a href="##">Courses</a>
+            </div>
+        </div>
     </footer>
+    <div class="Privacy_holder">
+        <div class="Privacy_links">
+            <a href="##">Privacy policy</a>
+            <a href="##">Cookies Notice</a>
+            <a href="##">Security</a>
+            <a href="##">Terms of use</a>
+        </div>
+        <div class="Social-media">
+            <img src="./assets/twitter.svg" />
+            <img src="./assets/facebook.svg" />
+            <img src="./assets/instagram.svg" />
+        </div>
+    </div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 
 
-
-    navbar = document.querySelector(".navbar");
+    const move = document.getElementById("move")
+    const move_text = document.getElementById("move_text")
     const mood = document.getElementById("toggle")
+    const menu_img = document.getElementById("menu_img")
     mood.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mood")
-        if (document.body.classList.contains("dark-mood")) {
-            mood.src = "./sun2.jpg"
-            navbar.classList.add("navbar-dark")
-            navbar.classList.remove("navbar-light")
+        move.classList.toggle("mode-animate")
+        document.body.classList.toggle("light-mode")
+        if (document.body.classList.contains("light-mode")) {
+            // mood.src = "./photos/sun2.jpg"
+            move_text.innerHTML = "Light"
+            menu_img.src = "./assets/download (1).png"
         }
         else {
-            mood.src = "./moon.png"
-            navbar.classList.add("navbar-light")
-            navbar.classList.remove("navbar-dark")
+            // mood.src = "./photos/moon.png"
+            menu_img.src = "./assets/menu.png"
+            move_text.innerHTML = "Dark"
         }
     })
 
 </script>
+
+<script>
+    // Animation------------------------------------
+    AOS.init({
+        duration: 900,
+        offset: 220,
+        easing: 'ease-in-out-quad'
+    });
+    //-----scroll-----------------
+    const ham = document.querySelector('.Ham');
+    const Close = document.querySelector(".Close");
+    const DropMenu = document.querySelector('.dropMenu')
+    window.addEventListener('scroll', () => {
+        const top = window.innerHeight * (10 / 100) + 300;
+        if (window.scrollY <= top) {
+            document.querySelector(".Scroll").style.display = 'none';
+
+        }
+        if (window.scrollY > top) {
+            document.querySelector(".Scroll").style.display = 'grid';
+        }
+    });
+    ham.addEventListener('click', () => {
+        DropMenu.classList.add("MenuAnimation")
+
+    })
+    Close.addEventListener('click', () => {
+        DropMenu.classList.remove('MenuAnimation')
+
+    })
+</script>
+
 
 </html>
