@@ -443,6 +443,91 @@
             padding-bottom: 70px;
         }
 
+        
+        .lparent {
+            position: relative;
+            top: 70px;
+            padding: 40px 0;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .learners {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* width: fit-content; */
+        }
+
+        .learners .card {
+            width: 330px;
+            box-shadow: 1px 1px 9px grey;
+            height: 23rem;
+            justify-content: initial;
+            display: flex;
+            align-items: center;
+            margin: 16px 16px;
+            margin-bottom: 3rem;
+            padding: 16px 16px 24px;
+            background-color: white;
+            /* background-image: var(--learners-bg-col); */
+
+        }
+
+        .learner-img {
+            border-radius: 50% !important;
+            height: 83px !important;
+            margin: 16px auto;
+            padding: 0 !important;
+            width: auto !important;
+            position: relative;
+            top: -25%;
+            left: -33%;
+        }
+
+        .lmain-body {
+            position: relative;
+            top: -20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .labout {
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.3;
+            color: black;
+        }
+
+        .lposition {
+            font-size: 12px;
+            margin-bottom: 16px;
+            color: black;
+        }
+
+        .lbody p {
+            font-size: 14px;
+            text-align: justify;
+            margin-bottom: 0;
+            color: black;
+            padding: 0;
+        }
+        .lstory{
+            /* width: 100%; */
+            position: absolute;
+            bottom: 5%;
+            left: 3.5%;
+            /* padding-left: 16px; */
+            color: black;
+        }
+
+
         @media only screen and (max-width:1200px) {
             .cards a {
                 width: 49%;
@@ -834,6 +919,61 @@
 
         </div>
     </div>
+
+
+    <div class="lparent">
+        <h2 style="text-align: center; margin-bottom: 4rem;">See what Our Learners are Saying</h2>
+        <div class="learners ">
+            <div class="card">
+                <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
+                <div class="lmain-body">
+                    <h6 class="labout">Giovanna Reggina Galleno Malaga | Milan - Italy</h6>
+                    <p class="lposition">Soft Skills Trainer
+                    </p>
+                    <div class="lbody">
+                        <p>I feel so lucky of being part of this amazing community that has helped me to change my life.
+                            Thank
+                            you so much DPhi team and coaches for making this possible!</p>
+
+                    </div>
+                </div>
+                <a class="lstory">Read learnrs story</a>
+            </div>
+
+            <div class="card">
+                <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
+                <div class="lmain-body">
+                    <h6 class="labout">Deeksha Singh | Hyderabad, India</h6>
+                    <p class="lposition">Invenory Specialist</p>
+                    <div class="lbody">
+                        <p>I couldn’t have asked for a better start to my Data Science journey. I will forever be
+                            grateful
+                            to
+                            the entire team of Dphi for putting in all the efforts and ensuring a hassle free, rich
+                            learning
+                            experience for all of us.</p>
+                    </div>
+                </div>
+                <a class="lstory">Read learnrs story</a>
+            </div>
+            <div class="card">
+                <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
+                <div class="lmain-body">
+                    <h6 class="labout">Rackson Mathias | Calgary, Canada </h6>
+                    <p class="lposition">Web Developer</p>
+                    <div class="lbody">
+                        <p>I am always very enthusiastic about getting accurate information from data as well as making
+                            sound
+                            predictions. DPhi has greatly helped in fine-tuning my knowledge and practices. I intend to
+                            apply my
+                            learnings in deploying models in environmental systems as well as in business analytics.</p>
+                    </div>
+                </div>
+                <a class="lstory">Read learnrs story</a>
+            </div>
+        </div>
+    </div>
+
 
     <div class="pos" style="background: var(--footer-col); border-top: 1px solid black;">
         <footer class="Footer_conatiner">
