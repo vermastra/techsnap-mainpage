@@ -40,7 +40,7 @@
 
         }
 
-         :root{
+        :root {
 
             --heading-col: white;
             --text-col: #b7b4b4;
@@ -48,7 +48,7 @@
             --desine-col: #ff1493;
             --toggle-border-col: white;
             --btn-bg-col: black;
-            --btn-bg-hov-col:white;
+            --btn-bg-hov-col: white;
             --card-parent-bg-col: #1e1e1f;
             --nav-bg-col: #19191a;
             --footer-text-col: rgba(245, 245, 245, 0.788);
@@ -78,7 +78,8 @@
             justify-content: space-between;
         }
 
-        #move,.fixed {
+        #move,
+        .fixed {
             border-radius: 50px;
             height: 100%;
             width: 3.7rem;
@@ -86,16 +87,18 @@
             align-content: center;
             display: flex;
             position: absolute;
-           
-            align-items: center;   
+
+            align-items: center;
         }
-        .fixed{
+
+        .fixed {
             position: relative;
             background-color: transparent;
             z-index: -1;
         }
 
-        #move p,.fixed p {
+        #move p,
+        .fixed p {
             margin: auto;
             display: flex;
             padding-bottom: 3px;
@@ -103,18 +106,21 @@
             font-weight: 500;
             margin-top: 3px;
         }
-        #move{
+
+        #move {
             box-shadow: -1px 0px 4px rgb(23 22 26 / 25%);
             left: 65px;
-            transition: all .5s; 
+            transition: all .5s;
         }
+
         .mode-animate {
-                /* transform: translatex(-65px); */
-                left: 0 !important;
-               
+            /* transform: translatex(-65px); */
+            left: 0 !important;
+
         }
-        @media only screen and (max-width:1285px){
-            #toggle{
+
+        @media only screen and (max-width:1285px) {
+            #toggle {
                 left: -33px;
             }
         }
@@ -159,6 +165,35 @@
             margin-left: auto;
         }
 
+        .lovedby {
+            display: flex;
+            padding: 24px 16px;
+            justify-content: space-evenly;
+            width: 100%;
+            background-color: #F2F4FF;
+            flex-wrap: wrap;
+        }
+
+        .lovedimg {
+            width: 83.333%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .lovedtext {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            color: black;
+        }
+
+        .limg {
+            /* width: 25%; */
+            display: flex;
+            margin: 5px;
+        }
+
         a {
             color: var(--a-col);
             text-decoration: none;
@@ -172,7 +207,7 @@
 
         }
 
-         a:hover {
+        a:hover {
             color: var(--desine-col);
         }
 
@@ -183,6 +218,10 @@
             /* padding-top: 50px; */
             align-items: center;
             border-bottom: 1px solid gray;
+        }
+
+        .block1 {
+            height: 83vh;
         }
 
         .pos {
@@ -215,6 +254,9 @@
             height: 19rem;
         }
 
+        .gif1 {
+            height: 31rem;
+        }
 
 
         p {
@@ -227,10 +269,10 @@
         button {
             padding: 0;
             border-radius: 5px;
-            border-color:#ced4da ;
+            border-color: #ced4da;
             background-color: var(--desine-col);
         }
-        
+
         button:hover {
             background-color: var(--btn-bg-hov-col);
         }
@@ -247,7 +289,7 @@
             padding-left: 0;
             padding-right: 0;
             display: flex;
-            min-height: 84vh;
+            min-height: 92vh;
             flex-direction: row;
             justify-content: space-around;
             border-color: var(--toggle-border-col);
@@ -266,6 +308,8 @@
             text-align: center;
             padding: 16px;
             background-color: white;
+            border-radius: 12px;
+
         }
 
         .login button {
@@ -274,7 +318,8 @@
             border-color: #ced4da;
 
         }
-        .login button:hover{
+
+        .login button:hover {
             background-color: var(--btn-bg-hov-col);
         }
 
@@ -282,12 +327,10 @@
             /* background-color: var(--body-bg-col); */
             background-color: white;
             width: 24rem;
-            border: 3px solid #ff1493;
-            border-radius: 8px;
-            height: 28rem;
+            border-radius: 99px;
+            /* height: 28rem; */
             display: flex;
             flex-direction: column;
-            /* justify-content: center; */
 
         }
 
@@ -302,10 +345,12 @@
             border-radius: 7px;
             /* margin-bottom: 5px; */
         }
-        .google a{
+
+        .google a {
             color: black;
         }
-        .google a:hover{
+
+        .google a:hover {
             color: #ff1493;
         }
 
@@ -413,7 +458,7 @@
 
             .content {
                 width: 100%;
-                /* padding-top: 6rem; */
+                padding-top: 20px;
 
             }
 
@@ -435,9 +480,18 @@
             p {
                 text-align: justify;
             }
-            .theme{
+
+            .theme {
                 display: none;
             }
+
+            .lovedby {
+                margin-top: 65px;
+            }
+
+            /* .gif1{
+                display: none;
+            } */
 
         }
 
@@ -471,12 +525,28 @@
                 right: 10px;
                 top: 23px;
             }
+
+            .lovedby {
+                padding: 10px;
+            }
+
+            .lovedtext {
+                font-size: 21px;
+            }
+
+            .limg {
+                width: 20%;
+            }
+
+            .limg img {
+                width: 100%;
+            }
         }
 
         @media only screen and (max-width:477px) {
             form {
                 width: 20rem;
-                height: 26.7rem;
+                /* height: 26.7rem; */
             }
 
             form h6 {
@@ -507,17 +577,18 @@
 <body>
 
 
-
-    <section style="border-bottom: 1px solid black;" class="header">
-        <img id='logo' src="./assets/logo_pink[bg].jpg" alt="logo">
-        <div class="navItems">
-            <a href="##">About Us</a>
-            <a href="##">Our People</a>
-            <a href="##">Learn</a>
-            <button class="btn">Get Started</button>
-        </div>
-        <div class="Ham">
-            <img style="width: 22.85px;" id="menu_img" src="./assets/menu.png" alt="Ham">
+    <section style="border-bottom: 1px solid black;" class="header  ">
+        <div class="container" style="display: flex; justify-content: space-between; padding: 0; align-items: center;">
+            <img id='logo' src="./assets/logo_pink[bg].jpg" alt="logo">
+            <div class="navItems">
+                <a href="##">About Us</a>
+                <a href="##">Our People</a>
+                <a href="##">Learn</a>
+                <button class="btn">Get Started</button>
+            </div>
+            <div class="Ham">
+                <img style="width: 22.85px;" id="menu_img" src="./assets/menu.png" alt="Ham">
+            </div>
         </div>
     </section>
     <!-- mobile menu --------------------------------------------- -->
@@ -549,8 +620,8 @@
     </div>
 
 
-    <div style="padding-bottom: 65px;" class="container pos ">
-        <div class="block">
+    <div class="container pos ">
+        <div class="block block1" style="border: none;">
             <div class="content">
                 <h1><span style="color: #ff1493;">FREE</span> PROJECTS AND <br> TUTORIALS</h1>
                 <p>Here, on TechSnap we provide some efficient courses, projects, tutorials to enhance your knowledge on
@@ -558,11 +629,38 @@
                 <button><a href="#courses">EXPLORE</a></button>
             </div>
             <div class="img">
-                <img class="gif" src="https://i.pinimg.com/originals/01/32/31/01323190cd6933de96287a5804fd636a.gif"
-                    alt="">
+                <img class="gif gif1" src="./photos/character 13.svg" alt="">
             </div>
         </div>
+    </div>
 
+    <div class="pos" style="background-color: #F2F4FF;">
+        <div class="lovedby container">
+            <div class="lovedtext">Loved by learners at</div>
+            <div class="lovedimg">
+                <div class="limg">
+                    <img src="	https://dphi.s3.ap-south-1.amazonaws.com/company_logos/google.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="https://dphi.s3.ap-south-1.amazonaws.com/company_logos/ibm.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="	https://dphi.s3.ap-south-1.amazonaws.com/company_logos/harvard.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="https://dphi.s3.ap-south-1.amazonaws.com/company_logos/yale.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="	https://dphi.s3.ap-south-1.amazonaws.com/company_logos/paypal.svg" alt="">
+                </div>
+                <div class="limg">
+                    <img src="	https://dphi.s3.ap-south-1.amazonaws.com/company_logos/kuleuven.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pos">
         <!-- class explore -->
         <div class=" block explore" id="courses">
             <div class="content">
@@ -574,7 +672,7 @@
                 <p>So what are you waiting for? Explore our in-demand technologies based courses which may adds value to
                     your career.
                 </p>
-                <button><a href="./courses.html" >GET STARTED</a></button>
+                <button><a href="./courses.html">GET STARTED</a></button>
             </div>
             <div class="img">
                 <img class="gif" src="./photos/course1.png" alt="">
@@ -591,7 +689,7 @@
                 <p>It's obvious that applying helps us to enhance existing skills and possibly upgrades
                     your resume/cv, may makes our employable chances higher.
                 </p>
-                <button><a href="./projects.html" >GET STARTED</a></button>
+                <button><a href="./projects.html">GET STARTED</a></button>
             </div>
             <div class="img">
                 <img class="gif" src="./photos/—Pngtree—a man who works at_5361911.png" alt="">
@@ -608,7 +706,7 @@
                 <p>Easy to learn and skip to the topics where you are not confident about.
                     Let's get started with our utmost tutorials on trending skills.
                 </p>
-                <button><a href="./tutorials.html" >GET STARTED</a></button>
+                <button><a href="./tutorials.html">GET STARTED</a></button>
             </div>
             <div class="img">
                 <img class="gif" src="./photos/tutorials1-1.png" alt="">
@@ -628,13 +726,13 @@
 
             <form action="#">
                 <div class="login">
-                    <h3 style="margin: 14px;color: black;">CREATE YOUR FREE ACCOUNT</h3>
+                    <h3 style="margin: 14px 0;color: black; font-size: 22px;">CREATE YOUR FREE ACCOUNT</h3>
                     <div class="google">
                         <!-- <a href="#"> -->
-                            <img style="width: 1.5rem;"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIAqKNPSxidvLJv-2wJtis24OZFMdGlt9IV6OtSeh0h77C9ZItFjTk373jd5jS7HgimY&usqp=CAU"
-                                alt="">
-                            <h6> <a  href="#">GOOGLE</a> </h6>
+                        <img style="width: 1.5rem;"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiIAqKNPSxidvLJv-2wJtis24OZFMdGlt9IV6OtSeh0h77C9ZItFjTk373jd5jS7HgimY&usqp=CAU"
+                            alt="">
+                        <h6> <a href="#">GOOGLE</a> </h6>
                         <!-- </a> -->
                     </div>
                     <div class="underline__or">
@@ -642,6 +740,10 @@
                         <span style="color: black;" class="or">OR</span>
                     </div>
 
+                    <div class="form-element">
+                        <h6 style="color: black;">NAME :</h6>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
                     <div class="form-element">
                         <h6 style="color: black;">EMAIL :</h6>
                         <input type="email" name="email" placeholder="Email Address" required>
@@ -652,7 +754,7 @@
                         <input type="password" name="password" placeholder="Password" required>
                     </div>
                     <button class="form-element" type="submit">
-                        <h5> START LEARNING</h5>
+                        <h5> Start Learning For Free</h5>
                     </button>
                     <h6 style="margin-top: 14px; color: black;">Have Account? <a href="#">Login Here</a></h6>
                 </div>
@@ -660,82 +762,99 @@
         </div>
     </div>
 
-    <footer style="border-top: 1px solid black;" class="Footer_conatiner">
-        <div class="Footer_header">
-            <img src="./assets/logo_pink[bg].jpg" alt="Logo">
-            <br><br>
-            <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
-                about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
-                JOBS AND REQUIRED SKILLS</p>
-            <br>
-            <p>As well we help you to submit your projects in your degree pursuing university and we help you by free
-                tutorials in Data science,AI, ML</p>
-        </div>
-        <div class="Footer_columns_holder">
-            <div class="Footer_columns">
-                <h1>Company</h1>
-                <a href="##">About us</a>
-                <a href="##">Learner stories</a>
-                <a href="##">our people</a>
-                <a href="##">jobs</a>
+    <!-- <hr style="position: relative;top: 80px;"> -->
+    <div class="pos" style="background: var(--footer-col); border-top: 1px solid black;">
+        <footer class="Footer_conatiner ">
+            <div class="Footer_header">
+                <img src="./assets/logo_pink[bg].jpg" alt="Logo">
+                <br><br>
+                <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
+                    about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
+                    JOBS AND REQUIRED SKILLS</p>
+                <br>
+                <p>As well we help you to submit your projects in your degree pursuing university and we help you by
+                    free
+                    tutorials in Data science,AI, ML</p>
             </div>
-            <div class="Footer_columns">
-                <h1>Resources</h1>
-                <a href="##">Learn</a>
-                <a href="##">Carrer path</a>
-                <a href="##">Internship</a>
-                <a href="##">Blogs</a>
+            <div class="Footer_columns_holder">
+                <div class="Footer_columns">
+                    <h1>Company</h1>
+                    <a href="##">About us</a>
+                    <a href="##">Learner stories</a>
+                    <a href="##">our people</a>
+                    <a href="##">jobs</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Resources</h1>
+                    <a href="##">Learn</a>
+                    <a href="##">Carrer path</a>
+                    <a href="##">Internship</a>
+                    <a href="##">Blogs</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Support</h1>
+                    <a href="##">Contact us</a>
+                    <a href="##">FAQ</a>
+                    <a href="##">Any ideas, DM us</a>
+                    <a href="##">Doc</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Services</h1>
+                    <a href="##">Startup services</a>
+                    <a href="##">Design services</a>
+                    <a href="##">Projects</a>
+                    <a href="##">Courses</a>
+                </div>
             </div>
-            <div class="Footer_columns">
-                <h1>Support</h1>
-                <a href="##">Contact us</a>
-                <a href="##">FAQ</a>
-                <a href="##">Any ideas, DM us</a>
-                <a href="##">Doc</a>
+        </footer>
+    </div>
+    <div class="pos" style="background: var(--footer-col);">
+        <div class="Privacy_holder ">
+            <div class="Privacy_links">
+                <a href="##">Privacy policy</a>
+                <a href="##">Cookies Notice</a>
+                <a href="##">Security</a>
+                <a href="##">Terms of use</a>
             </div>
-            <div class="Footer_columns">
-                <h1>Services</h1>
-                <a href="##">Startup services</a>
-                <a href="##">Design services</a>
-                <a href="##">Projects</a>
-                <a href="##">Courses</a>
+            <div class="Social-media">
+                <img src="./assets/twitter.svg" />
+                <img src="./assets/facebook.svg" />
+                <img src="./assets/instagram.svg" />
             </div>
-        </div>
-    </footer>
-    <div class="Privacy_holder">
-        <div class="Privacy_links">
-            <a href="##">Privacy policy</a>
-            <a href="##">Cookies Notice</a>
-            <a href="##">Security</a>
-            <a href="##">Terms of use</a>
-        </div>
-        <div class="Social-media">
-            <img src="./assets/twitter.svg" />
-            <img src="./assets/facebook.svg" />
-            <img src="./assets/instagram.svg" />
         </div>
     </div>
 </body>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
+    if (screen.width >= 1540) {
+        document.querySelector(".Footer_conatiner").classList.add("cont")
+        document.querySelector(".Privacy_holder").classList.add("cont")
+    }
+    else {
+        document.querySelector(".Footer_conatiner").classList.remove("cont")
+        document.querySelector(".Privacy_holder").classList.remove("cont")
 
+    }
     const mood = document.getElementById("toggle")
     const move = document.getElementById("move")
     const move_text = document.getElementById("move_text")
     const menu_img = document.getElementById("menu_img")
+    let login=document.querySelector('.login')
     mood.addEventListener("click", () => {
         document.body.classList.toggle("light-mode")
         move.classList.toggle("mode-animate")
         if (document.body.classList.contains("light-mode")) {
             // mood.src = "./photos/sun2.jpg"
             menu_img.src = "./assets/download (1).png"
-            move_text.innerHTML="Light" 
+            move_text.innerHTML = "Light"
+            login.style.boxShadow="2px 2px 10px 0px #e7e7e7"
         }
         else {
             // mood.src = "./photos/moon.png"
             menu_img.src = "./assets/menu.png"
-            move_text.innerHTML="Dark"
+            move_text.innerHTML = "Dark"
+            login.style.boxShadow="none"
         }
     })
 

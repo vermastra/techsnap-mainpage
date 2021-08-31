@@ -12,7 +12,7 @@
 *::-webkit-scrollbar {
 	display: none;
 }
-:root {
+.light-mode {
 	--heading-col: black;
 	--text-col: black;
 	--body-bg-col: white;
@@ -23,12 +23,13 @@
 	/* --card-parent-bg-col: #e5e8ef; */
 	--nav-bg-col: white;
 	--footer-text-col: #232323;
+	--footer-col:white;
 	--toggle-border-col: black;
-
+	
 }
 
-.dark-mood {
-
+:root {
+	
 	--heading-col: white;
 	--text-col: #b7b4b4;
 	--body-bg-col: black;
@@ -38,9 +39,11 @@
 	--btn-bg-hov-col:white;
 	--card-parent-bg-col: #1e1e1f;
 	--nav-bg-col: #19191a;
+	--footer-col:#19191a;
 	--footer-text-col: rgba(245, 245, 245, 0.788);
 	transition: all .5s;
 }
+
 .header {
 	
 	padding: 0 60px;
@@ -160,8 +163,14 @@ body {
 	display: flex;
 	justify-content: space-evenly;
 	padding: 20px 20px;
-	position: relative;
-	top: 70px;
+	padding-left: 40px;
+	/* position: relative;
+	top: 70px; */
+}
+@media (max-width:991px) {
+	.Footer_conatiner{
+		padding: 20px 20px;
+	}
 }
 .Footer_header {
 	width: 50%;
@@ -224,8 +233,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	position: relative;
-	top: 69px;
+	/* position: relative;
+	top: 69px; */
 }
 .Privacy_links {
 	width: 50%;
@@ -320,5 +329,34 @@ body {
 @media (max-width: 400px) {
 	.Hero_details h1 {
 		font-size: 1.5rem;
+	}
+}
+
+
+/* @media (min-width: 576px) {
+	.cont{
+		max-width: 540px;
+		margin: auto;
+	}
+}
+@media (min-width: 768px) {
+	.cont{
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.cont{
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.cont{
+		max-width: 1140px;
+	}
+} */
+@media (min-width: 1400px) {
+	.cont{
+		margin: auto;
+		max-width: 1320px;
 	}
 }

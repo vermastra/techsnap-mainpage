@@ -170,7 +170,7 @@
 
         .pos {
             position: relative;
-            /* top: 50px; */
+            top: 50px;
         }
 
         .cover {
@@ -258,7 +258,7 @@
             display: flex;
             height: 115px;
             padding: 10px;
-            background-color: #f2f4ff;
+            /* background-color: #f2f4ff; */
         }
 
         .aimg {
@@ -456,18 +456,30 @@
             display: flex;
             align-items: center;
             margin: 16px 16px;
+            margin-bottom: 3rem;
             padding: 16px 16px 24px;
-            background-image: linear-gradient(45deg, #ff1493, violet);
+            background-color: white;
             /* background-image: var(--learners-bg-col); */
 
         }
 
         .learner-img {
             border-radius: 50% !important;
-            height: 100px !important;
+            height: 83px !important;
             margin: 16px auto;
             padding: 0 !important;
             width: auto !important;
+            position: relative;
+            top: -25%;
+            left: -33%;
+        }
+
+        .lmain-body {
+            position: relative;
+            top: -20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .labout {
@@ -475,17 +487,20 @@
             font-weight: 500;
             text-align: center;
             line-height: 1.6;
+            color: black;
         }
 
         .lposition {
             font-size: 12px;
             margin-bottom: 16px;
+            color: black;
         }
 
         .lbody p {
             font-size: 14px;
             text-align: justify;
             margin-bottom: 0;
+            color: black;
         }
 
         @media only screen and (max-width:1200px) {
@@ -528,7 +543,8 @@
             .why h2 {
                 text-align: center;
             }
-            .theme{
+
+            .theme {
                 display: none;
             }
 
@@ -560,11 +576,11 @@
             }
 
             .cover {
-                height: 91vh;
+                height: 67vh;
                 top: 70px;
                 text-align: center;
                 justify-content: center;
-                background-size: 100% 100%;
+                background-size: cover;
             }
 
             nav h1 {
@@ -656,15 +672,17 @@
 
 
     <section style="border-bottom: 1px solid black;" class="header">
-        <img id='logo' src="./assets/logo_pink[bg].jpg" alt="logo">
-        <div class="navItems">
-            <a href="##">About Us</a>
-            <a href="##">Our People</a>
-            <a href="##">Learn</a>
-            <button class="btn">Get Started</button>
-        </div>
-        <div class="Ham">
-            <img style="width: 22.85px;" id="menu_img" src="./assets/menu.png" alt="Ham">
+        <div class="container" style="display: flex; justify-content: space-between; padding: 0; align-items: center;">
+            <img id='logo' src="./assets/logo_pink[bg].jpg" alt="logo">
+            <div class="navItems">
+                <a href="##">About Us</a>
+                <a href="##">Our People</a>
+                <a href="##">Learn</a>
+                <button class="btn">Get Started</button>
+            </div>
+            <div class="Ham">
+                <img style="width: 22.85px;" id="menu_img" src="./assets/menu.png" alt="Ham">
+            </div>
         </div>
     </section>
     <!-- mobile menu --------------------------------------------- -->
@@ -697,7 +715,7 @@
 
     <div class="cover">
         <h1 class="container" style="color: white; text-align: center;">TECHSNAP COURSES</h1>
-        <div class="container pos">
+        <div class="container">
             <p style="color: white;font-size: 1.2rem;text-align: center;">Here, on TechSnap we provide the courses which
                 are in-demand that
                 adds value to your resume
@@ -710,7 +728,7 @@
             </div> -->
         <!-- <hr> -->
     </div>
-    
+
     <div style="background-color: #F2F4FF; position: relative;top: 70px;">
         <div class="lovedby container">
             <div class="lovedtext">Loved by learners at</div>
@@ -745,8 +763,8 @@
                     <img src="./assets/strctured-learning.png" alt="">
                 </div>
                 <div class="anstext">
-                    <h3 style="color: black;">Structured Learning</h3>
-                    <p style="margin: 0; color: black;">Guided learning paths for learners at various levels </p>
+                    <h3>Structured Learning</h3>
+                    <p style="margin: 0; ">Guided learning paths for learners at various levels </p>
                 </div>
             </div>
             <div class="ans">
@@ -754,15 +772,15 @@
                     <img src="./assets/real.png" alt="">
                 </div>
                 <div class="anstext">
-                    <h3 style="color: black;">Real-world Challenges</h3>
-                    <p style="margin: 0;color: black;">Practice and enhance your skills on real world data projects </p>
+                    <h3>Real-world Challenges</h3>
+                    <p style="margin: 0;">Practice and enhance your skills on real world data projects </p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="bgcol" id="explore_jump">
-        <div style="padding-top: 5rem;" class="container pos">
+        <div style="padding-top: 5rem;" class="container">
             <h2 style="text-align: center;">Find which interests you the most</h2>
             <div class="cards">
                 <a href="#">
@@ -889,101 +907,114 @@
         </div>
     </div>
     <div class="lparent">
-        <h2 style="text-align: center; margin-bottom: 1rem;">See what Our Learners are Saying</h2>
+        <h2 style="text-align: center; margin-bottom: 4rem;">See what Our Learners are Saying</h2>
         <div class="learners ">
             <div class="card">
                 <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
-                <h6 class="labout">Giovanna Reggina Galleno Malaga | Milan - Italy</h6>
-                <p class="lposition">Soft Skills Trainer
-                </p>
-                <div class="lbody">
-                    <p>I feel so lucky of being part of this amazing community that has helped me to change my life.
-                        Thank
-                        you so much DPhi team and coaches for making this possible!</p>
+                <div class="lmain-body">
+                    <h6 class="labout">Giovanna Reggina Galleno Malaga | Milan - Italy</h6>
+                    <p class="lposition">Soft Skills Trainer
+                    </p>
+                    <div class="lbody">
+                        <p>I feel so lucky of being part of this amazing community that has helped me to change my life.
+                            Thank
+                            you so much DPhi team and coaches for making this possible!</p>
 
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
-                <h6 class="labout">Deeksha Singh | Hyderabad, India</h6>
-                <p class="lposition">Invenory Specialist</p>
-                <div class="lbody">
-                    <p>I couldn’t have asked for a better start to my Data Science journey. I will forever be grateful
-                        to
-                        the entire team of Dphi for putting in all the efforts and ensuring a hassle free, rich learning
-                        experience for all of us.</p>
+                <div class="lmain-body">
+                    <h6 class="labout">Deeksha Singh | Hyderabad, India</h6>
+                    <p class="lposition">Invenory Specialist</p>
+                    <div class="lbody">
+                        <p>I couldn’t have asked for a better start to my Data Science journey. I will forever be
+                            grateful
+                            to
+                            the entire team of Dphi for putting in all the efforts and ensuring a hassle free, rich
+                            learning
+                            experience for all of us.</p>
+                    </div>
                 </div>
             </div>
             <div class="card">
                 <img class="learner-img" src="./photos/sun2.jpg" alt="Card image cap">
-                <h6 class="labout">Rackson Mathias | Calgary, Canada </h6>
-                <p class="lposition">Web Developer</p>
-                <div class="lbody">
-                    <p>I am always very enthusiastic about getting accurate information from data as well as making
-                        sound
-                        predictions. DPhi has greatly helped in fine-tuning my knowledge and practices. I intend to
-                        apply my
-                        learnings in deploying models in environmental systems as well as in business analytics.</p>
+                <div class="lmain-body">
+                    <h6 class="labout">Rackson Mathias | Calgary, Canada </h6>
+                    <p class="lposition">Web Developer</p>
+                    <div class="lbody">
+                        <p>I am always very enthusiastic about getting accurate information from data as well as making
+                            sound
+                            predictions. DPhi has greatly helped in fine-tuning my knowledge and practices. I intend to
+                            apply my
+                            learnings in deploying models in environmental systems as well as in business analytics.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
+    <div class="pos" style="background: var(--footer-col); border-top: 1px solid black;">
+        <footer class="Footer_conatiner">
+            <div class="Footer_header">
+                <img src="./assets/logo_pink[bg].jpg" alt="Logo">
+                <br><br>
+                <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
+                    about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
+                    JOBS AND REQUIRED SKILLS</p>
+                <br>
+                <p>As well we help you to submit your projects in your degree pursuing university and we help you by
+                    free
+                    tutorials in Data science,AI, ML</p>
+            </div>
+            <div class="Footer_columns_holder">
+                <div class="Footer_columns">
+                    <h1>Company</h1>
+                    <a href="##">About us</a>
+                    <a href="##">Learner stories</a>
+                    <a href="##">our people</a>
+                    <a href="##">jobs</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Resources</h1>
+                    <a href="##">Learn</a>
+                    <a href="##">Carrer path</a>
+                    <a href="##">Internship</a>
+                    <a href="##">Blogs</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Support</h1>
+                    <a href="##">Contact us</a>
+                    <a href="##">FAQ</a>
+                    <a href="##">Any ideas, DM us</a>
+                    <a href="##">Doc</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Services</h1>
+                    <a href="##">Startup services</a>
+                    <a href="##">Design services</a>
+                    <a href="##">Projects</a>
+                    <a href="##">Courses</a>
+                </div>
+            </div>
+        </footer>
+    </div>
 
-    <footer style="border-top: 1px solid black;" class="Footer_conatiner">
-        <div class="Footer_header">
-            <img src="./assets/logo_pink[bg].jpg" alt="Logo">
-            <br><br>
-            <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
-                about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
-                JOBS AND REQUIRED SKILLS</p>
-            <br>
-            <p>As well we help you to submit your projects in your degree pursuing university and we help you by free
-                tutorials in Data science,AI, ML</p>
-        </div>
-        <div class="Footer_columns_holder">
-            <div class="Footer_columns">
-                <h1>Company</h1>
-                <a href="##">About us</a>
-                <a href="##">Learner stories</a>
-                <a href="##">our people</a>
-                <a href="##">jobs</a>
+    <div class="pos" style="background: var(--footer-col);">
+        <div class="Privacy_holder">
+            <div class="Privacy_links">
+                <a href="##">Privacy policy</a>
+                <a href="##">Cookies Notice</a>
+                <a href="##">Security</a>
+                <a href="##">Terms of use</a>
             </div>
-            <div class="Footer_columns">
-                <h1>Resources</h1>
-                <a href="##">Learn</a>
-                <a href="##">Carrer path</a>
-                <a href="##">Internship</a>
-                <a href="##">Blogs</a>
+            <div class="Social-media">
+                <img src="./assets/twitter.svg" />
+                <img src="./assets/facebook.svg" />
+                <img src="./assets/instagram.svg" />
             </div>
-            <div class="Footer_columns">
-                <h1>Support</h1>
-                <a href="##">Contact us</a>
-                <a href="##">FAQ</a>
-                <a href="##">Any ideas, DM us</a>
-                <a href="##">Doc</a>
-            </div>
-            <div class="Footer_columns">
-                <h1>Services</h1>
-                <a href="##">Startup services</a>
-                <a href="##">Design services</a>
-                <a href="##">Projects</a>
-                <a href="##">Courses</a>
-            </div>
-        </div>
-    </footer>
-    <div class="Privacy_holder">
-        <div class="Privacy_links">
-            <a href="##">Privacy policy</a>
-            <a href="##">Cookies Notice</a>
-            <a href="##">Security</a>
-            <a href="##">Terms of use</a>
-        </div>
-        <div class="Social-media">
-            <img src="./assets/twitter.svg" />
-            <img src="./assets/facebook.svg" />
-            <img src="./assets/instagram.svg" />
         </div>
     </div>
 </body>
@@ -991,7 +1022,15 @@
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 
+    if (screen.width >= 1540) {
+        document.querySelector(".Footer_conatiner").classList.add("cont")
+        document.querySelector(".Privacy_holder").classList.add("cont")
+    }
+    else {
+        document.querySelector(".Footer_conatiner").classList.remove("cont")
+        document.querySelector(".Privacy_holder").classList.remove("cont")
 
+    }
     const move = document.getElementById("move")
     const move_text = document.getElementById("move_text")
     const mood = document.getElementById("toggle")

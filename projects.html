@@ -169,7 +169,7 @@
 
         .pos {
             position: relative;
-            /* top: 50px; */
+            top: 50px;
         }
 
         /* .cover {
@@ -270,7 +270,7 @@
             display: flex;
             height: 115px;
             padding: 10px;
-            background-color: #f2f4ff;
+            /* background-color: #f2f4ff; */
         }
 
         .aimg {
@@ -517,7 +517,7 @@
             }
 
             .cover {
-                height: 91vh;
+                height: 64vh;
                 top: 70px;
                 text-align: center;
                 justify-content: center;
@@ -600,15 +600,17 @@
 <body>
 
     <section style="border-bottom: 1px solid black;" class="header">
-        <img id='logo' src="./assets/logo_pink[bg].jpg" alt="logo">
-        <div class="navItems">
-            <a href="##">About Us</a>
-            <a href="##">Our People</a>
-            <a href="##">Learn</a>
-            <button class="btn">Get Started</button>
-        </div>
-        <div class="Ham">
-            <img style="width: 22.85px;" id="menu_img" src="./assets/menu.png" alt="Ham">
+        <div class="container" style="display: flex; justify-content: space-between; padding: 0; align-items: center;">
+            <img id='logo' src="./assets/logo_pink[bg].jpg" alt="logo">
+            <div class="navItems">
+                <a href="##">About Us</a>
+                <a href="##">Our People</a>
+                <a href="##">Learn</a>
+                <button class="btn">Get Started</button>
+            </div>
+            <div class="Ham">
+                <img style="width: 22.85px;" id="menu_img" src="./assets/menu.png" alt="Ham">
+            </div>
         </div>
     </section>
     <!-- mobile menu --------------------------------------------- -->
@@ -641,7 +643,7 @@
 
     <div class="cover">
         <h1 class="container" style="color: white; text-align: center;">PROJECTS</h1>
-        <div class="container pos">
+        <div class="container ">
             <!-- class="block" -->
             <div id="courses">
                 <p style="text-align: center;font-size: 1.2rem;color: white;">Here, on TechSnap we provide some highly
@@ -687,8 +689,8 @@
                     <img src="./assets/strctured-learning.png" alt="">
                 </div>
                 <div class="anstext">
-                    <h3 style="color: black;">Structured Learning</h3>
-                    <p style="margin: 0; color: black;">Guided learning paths for learners at various levels </p>
+                    <h3>Structured Learning</h3>
+                    <p style="margin: 0; ">Guided learning paths for learners at various levels </p>
                 </div>
             </div>
             <div class="ans">
@@ -696,15 +698,15 @@
                     <img src="./assets/real.png" alt="">
                 </div>
                 <div class="anstext">
-                    <h3 style="color: black;">Real-world Challenges</h3>
-                    <p style="margin: 0;color: black;">Practice and enhance your skills on real world data projects </p>
+                    <h3>Real-world Challenges</h3>
+                    <p style="margin: 0;">Practice and enhance your skills on real world data projects </p>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="bgcol" id="explore_jump">
-        <div class="container pos" style="padding-top: 5rem;">
+        <div class="container " style="padding-top: 5rem;">
             <div class="cards">
                 <a href="#">
                     <div class="card">
@@ -817,67 +819,84 @@
         </div>
 
     </div>
-    <footer style="border-top: 1px solid black;" class="Footer_conatiner">
-        <div class="Footer_header">
-            <img src="./assets/logo_pink[bg].jpg" alt="Logo">
-            <br><br>
-            <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
-                about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
-                JOBS AND REQUIRED SKILLS</p>
-            <br>
-            <p>As well we help you to submit your projects in your degree pursuing university and we help you by free
-                tutorials in Data science,AI, ML</p>
-        </div>
-        <div class="Footer_columns_holder">
-            <div class="Footer_columns">
-                <h1>Company</h1>
-                <a href="##">About us</a>
-                <a href="##">Learner stories</a>
-                <a href="##">our people</a>
-                <a href="##">jobs</a>
+
+    <div class="pos" style="background: var(--footer-col); border-top: 1px solid black;">
+
+        <footer class="Footer_conatiner ">
+            <div class="Footer_header">
+                <img src="./assets/logo_pink[bg].jpg" alt="Logo">
+                <br><br>
+                <p>We are here to solve your problems beacuse while pursuing your UG-CSE you might have lot many doubts
+                    about trending jobs and skills required to get hired for that job, WE HELP YOU TO KNOW ABOT TRENDING
+                    JOBS AND REQUIRED SKILLS</p>
+                <br>
+                <p>As well we help you to submit your projects in your degree pursuing university and we help you by
+                    free
+                    tutorials in Data science,AI, ML</p>
             </div>
-            <div class="Footer_columns">
-                <h1>Resources</h1>
-                <a href="##">Learn</a>
-                <a href="##">Carrer path</a>
-                <a href="##">Internship</a>
-                <a href="##">Blogs</a>
+            <div class="Footer_columns_holder">
+                <div class="Footer_columns">
+                    <h1>Company</h1>
+                    <a href="##">About us</a>
+                    <a href="##">Learner stories</a>
+                    <a href="##">our people</a>
+                    <a href="##">jobs</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Resources</h1>
+                    <a href="##">Learn</a>
+                    <a href="##">Carrer path</a>
+                    <a href="##">Internship</a>
+                    <a href="##">Blogs</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Support</h1>
+                    <a href="##">Contact us</a>
+                    <a href="##">FAQ</a>
+                    <a href="##">Any ideas, DM us</a>
+                    <a href="##">Doc</a>
+                </div>
+                <div class="Footer_columns">
+                    <h1>Services</h1>
+                    <a href="##">Startup services</a>
+                    <a href="##">Design services</a>
+                    <a href="##">Projects</a>
+                    <a href="##">Courses</a>
+                </div>
             </div>
-            <div class="Footer_columns">
-                <h1>Support</h1>
-                <a href="##">Contact us</a>
-                <a href="##">FAQ</a>
-                <a href="##">Any ideas, DM us</a>
-                <a href="##">Doc</a>
+        </footer>
+    </div>
+
+    <div class="pos" style="background: var(--footer-col);">
+        <div class="Privacy_holder">
+            <div class="Privacy_links">
+                <a href="##">Privacy policy</a>
+                <a href="##">Cookies Notice</a>
+                <a href="##">Security</a>
+                <a href="##">Terms of use</a>
             </div>
-            <div class="Footer_columns">
-                <h1>Services</h1>
-                <a href="##">Startup services</a>
-                <a href="##">Design services</a>
-                <a href="##">Projects</a>
-                <a href="##">Courses</a>
+            <div class="Social-media">
+                <img src="./assets/twitter.svg" />
+                <img src="./assets/facebook.svg" />
+                <img src="./assets/instagram.svg" />
             </div>
-        </div>
-    </footer>
-    <div class="Privacy_holder">
-        <div class="Privacy_links">
-            <a href="##">Privacy policy</a>
-            <a href="##">Cookies Notice</a>
-            <a href="##">Security</a>
-            <a href="##">Terms of use</a>
-        </div>
-        <div class="Social-media">
-            <img src="./assets/twitter.svg" />
-            <img src="./assets/facebook.svg" />
-            <img src="./assets/instagram.svg" />
         </div>
     </div>
+
 </body>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
 
+    if (screen.width >= 1540) {
+        document.querySelector(".Footer_conatiner").classList.add("cont")
+        document.querySelector(".Privacy_holder").classList.add("cont")
+    }
+    else {
+        document.querySelector(".Footer_conatiner").classList.remove("cont")
+        document.querySelector(".Privacy_holder").classList.remove("cont")
 
+    }
     const move = document.getElementById("move")
     const move_text = document.getElementById("move_text")
     const mood = document.getElementById("toggle")
